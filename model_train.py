@@ -34,14 +34,20 @@ def find_unique_values(data):
         "hours_per_week": {},
         "outcome": {}
     }
-
-    for element in data:       
+ 
+    for element in data:    
+        outcome_state = element["outcome"]
         for key, value in element.items():
+            unique_values[key][value] = {"True": 0, "False": 0}
+
             if value in unique_values[key].keys():
-                unique_values[key][value] += 1
+                #if outcome_state:
+                unique_values[key][value][str(outcome_state)] += 1
+
             else:
-                unique_values[key][value] = 1
-                
+                unique_values[key][value][str(outcome_state)] = 1
+
+                         
         print(f"Model in training. Processing item {counter}.")
         time.sleep(0)
         counter += 1
