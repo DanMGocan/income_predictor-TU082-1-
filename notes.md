@@ -3,6 +3,9 @@ and then to convert everything in JSON objects.
 
 1. Convert data from .csv to a long dictionary
 1.1. Clear the data from #3, #4, #14
+1.2. Clear the data (listwise deletion)
+1.3. Replace certain values with scales or binary values
+
 2. Randomly separate the information in two
 categories: learning and test (80% vs. 20%)
 
