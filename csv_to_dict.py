@@ -1,8 +1,13 @@
 import csv
 import random
+from datetime import datetime
 
 csvPath = "data/data_set.csv"
 
+current_time = datetime.now().strftime("%d/%m, at %H:%M:%S")
+current_day = datetime.today()
+
+# Function to convert the .csv document to a dictionary
 def convert_data(initial_path):
     all_data = []
     deleted_entries = 0
@@ -25,23 +30,30 @@ def convert_data(initial_path):
                 deleted_entries += 1
                 continue
             
+            # Creating a new dictionary from each entry in the .csv file, with the following modified:
+            ## all integers have the correct data type (int from str)
+            ## all white spaces in the str data types have been cleared
+            ## capital loss has been added as a negative int
+            ## outcome has been added as a boolean 
+
             new_dict = {
-                "age": row["Age"],
-                "workclass": row["Workclass"],
-                "education_number": row["Education-number"],
-                "marital_status": row["Marital-status"],
-                "occupation": row["Occupation"],
-                "relationship": row["Relationship"],
-                "race": row["Race"],
-                "gender": row["Gender"],
-                "capital_gain": row["Capital-gain"],
-                "capital_loss": row["Capital-loss"],
-                "hours_per_week": row["Hours-per-week"],
+                "age": int(row["Age"]),
+                "workclass": row["Workclass"].replace(" ", ""),
+                "education_number": int(row["Education-number"]),
+                "marital_status": row["Marital-status"].replace(" ", ""),
+                "occupation": row["Occupation"].replace(" ", ""),
+                "relationship": row["Relationship"].replace(" ", ""),
+                "race": row["Race"].replace(" ", ""),
+                "gender": row["Gender"].replace(" ", ""),
+                "capital_gain": int(row["Capital-gain"]),
+                "capital_loss": -(int(row["Capital-loss"])), 
+                "hours_per_week": int(row["Hours-per-week"]),
                 "outcome": outcome
             }
 
             all_data.append(new_dict)
 
+    # Shuffling the data set every time the function is called
     random.shuffle(all_data)
 
     return_object = {
@@ -55,20 +67,23 @@ def convert_data(initial_path):
 # Function that will split the first xx% elements of the set in a training set and 
 # a model testing set 
 def split_data(initial_data, training_percentage):
-    train_data = initial_data[:int((len(initial_data)+1)*(training_percentage / 100))] 
+    train_data = initial_data[ : int((len(initial_data)+1)*(training_percentage / 100))] 
     test_data = initial_data[int((len(initial_data)+1)*(training_percentage / 100)):] 
     return train_data, test_data
 
 all_data = convert_data(csvPath)
-train_data = split_data(all_data["all_data"], 50)[0]
-test_data = split_data(all_data["all_data"], 50)[1]
+divided_data = split_data(all_data["all_data"], 90)
+
+train_data = divided_data[0]# split_data(all_data["all_data"], 90)[0]
+test_data = divided_data[1]# split_data(all_data["all_data"], 90)[1]
 
 meta_data = {
     "all_data_length": all_data["initial_data_len"],
     "valid_data_length": len(all_data["all_data"]),
     "deleted_entries": all_data["deleted_entries"],
     "train_data_length": len(train_data),
-    "test_data": len(test_data)
+    "Test data length": len(test_data),
+    "Created on": current_time
 }
 
 with open('data/train_data.py','w') as data:
