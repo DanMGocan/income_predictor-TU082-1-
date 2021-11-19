@@ -23,3 +23,5 @@ TUG OF WAR Optimization system, maybe?
 For example, gender. If 0.8 of male gender has an income over 50k, 
 then the male = gender variable will have a TUGOWAR pull of 0.8.
 If the gender is femaile, then the tugowar pull is 0.2. 
+
+Do not forget to add DOCSTRINT
