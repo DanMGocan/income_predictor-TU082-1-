@@ -25,3 +25,7 @@ then the male = gender variable will have a TUGOWAR pull of 0.8.
 If the gender is femaile, then the tugowar pull is 0.2. 
 
 Do not forget to add DOCSTRINT
+
+Must add an incrementor / decrementor when checking for age,
+capital gains or losses as the exact values might not be present
+inside the trained model
