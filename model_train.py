@@ -15,7 +15,6 @@ import time
     # 'outcome': False
 
 train_data_length = len(train_data)
-print(train_data_length)
 
 def find_unique_values(data):
     '''To not forget to add DOCSTRING'''
@@ -47,7 +46,7 @@ def find_unique_values(data):
         for key, value in element.items():
             unique_values[key][value][outcome_state] += 1
                          
-        #print(f"Populating data. Processing item {counter}.")
+        print(f"Populating data. Processing item {counter}.")
         time.sleep(0)
         counter += 1
 
@@ -77,8 +76,6 @@ def find_unique_values(data):
                 "truth_average": round(truth_average, 2),
                 "false_average": round(false_average, 2)
             }
-            # print(f"Calculating Tug-of-war values. Latest value for {element, key} was {round(new_tug_of_war, 4)}")
-            # time.sleep(0.3)
 
     return unique_values
 

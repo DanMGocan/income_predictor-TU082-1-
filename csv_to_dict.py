@@ -30,6 +30,9 @@ def convert_data(initial_path):
                 deleted_entries += 1
                 continue
             
+            # Conditional that converts [age], [capital_loss], [capital_gain]
+            # and [hours_per_week] into categories. 
+
             # Creating a new dictionary from each entry in the .csv file, with the following modified:
             ## all integers have the correct data type (int from str)
             ## all white spaces in the str data types have been cleared
@@ -53,6 +56,9 @@ def convert_data(initial_path):
 
             all_data.append(new_dict)
 
+    # Shuffling the data set every time the function is called
+    random.shuffle(all_data)
+
     # Counting the amount of values for each key
     amount_of_values = {}
     for element in all_data:
@@ -65,13 +71,16 @@ def convert_data(initial_path):
             else:
                 amount_of_values[key] = {}
 
-    # Shuffling the data set every time the function is called
-    random.shuffle(all_data)
+    # Counting the amount of individual categories in the data set
+    amount_of_categories = {}
+    for element in amount_of_values.keys():
+        amount_of_categories[element] = len(amount_of_values[element].values())
 
     return_object = {
         "all_data": all_data,
         "deleted_entries": deleted_entries,
         "initial_data_len": initial_data_len,
+        "amount_of_categories": amount_of_categories,
         "amount_of_values": amount_of_values
     }
 
@@ -97,6 +106,7 @@ meta_data = {
     "train_data_length": len(train_data),
     "Test data length": len(test_data),
     "Created on": current_time,
+    "Amount of Categories": all_data["amount_of_categories"],
     "amount_of_values": all_data["amount_of_values"]
 }
 
