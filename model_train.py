@@ -38,10 +38,8 @@ def find_unique_values(data):
     # Adding empty dictionaries to each entry
     for element in data:   
         for key, value in element.items():
-            unique_values[key][value] = {"True": 0, "False": 0, "Tug-of-war": 0}
-            if key == "outcome": # Making sure a Tug-of-war value is not added to "outcome"
-                unique_values[key][value] = {"True": 0, "False": 0}
-
+            unique_values[key][value] = {"True": 0, "False": 0}
+            
     # Calculating the occurrence of each entry
     for element in data:    
         outcome_state = str(element["outcome"])
@@ -60,15 +58,25 @@ def find_unique_values(data):
             amount_true = unique_values[element][key]["True"]
             amount_false = unique_values[element][key]["False"]
             amount_total = amount_true + amount_false
-            new_tug_of_war = 0
+            truth_average = 0
+            false_average = 0
             
-            if amount_true >= amount_false:
-                new_tug_of_war = (amount_true / amount_total)
+            if amount_true > amount_false:
+                truth_average = (amount_true / amount_total) * 100
+                false_average = 100 - truth_average
+
+            elif amount_false > amount_true:
+                false_average = (amount_false / amount_total) * 100
+                truth_average = 100 - false_average
 
             else:
-               new_tug_of_war = - (amount_false / amount_total)
+                false_average = 50
+                truth_average = 50
 
-            unique_values[element][key] = round(new_tug_of_war, 4)
+            unique_values[element][key]["Averages"] = {
+                "truth_average": round(truth_average, 2),
+                "false_average": round(false_average, 2)
+            }
             # print(f"Calculating Tug-of-war values. Latest value for {element, key} was {round(new_tug_of_war, 4)}")
             # time.sleep(0.3)
 
