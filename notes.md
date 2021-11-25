@@ -13,7 +13,8 @@ categories: learning and test (80% vs. 20%)
 #! VERY IMPORTANT !#
 Process data as such to create groups of 10 in terms of
 age, capital gains / loss, etc. Create groups based on
-splitting averages.
+splitting averages. Split the averages by equally distributing
+values.
 
 Add optional conversion to JSON
 Type conversion as well, when writing the dictionary

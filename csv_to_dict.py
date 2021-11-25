@@ -1,6 +1,7 @@
 import csv
 import random
 from datetime import datetime
+from helper_functions import int_to_category
 
 csvPath = "data/data_set.csv"
 
@@ -30,8 +31,9 @@ def convert_data(initial_path):
                 deleted_entries += 1
                 continue
             
-            # Conditional that converts [age], [capital_loss], [capital_gain]
+            # Function that converts [age], [capital_loss], [capital_gain]
             # and [hours_per_week] into categories. 
+            int_to_category(row)
 
             # Creating a new dictionary from each entry in the .csv file, with the following modified:
             ## all integers have the correct data type (int from str)
