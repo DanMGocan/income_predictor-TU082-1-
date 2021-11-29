@@ -1,4 +1,4 @@
-from csv_to_dict import train_data
+from raw_data import train_data
 import time
 
     # 'age': 33, 

@@ -1,6 +1,2 @@
-
-
-def int_to_category(data_bit):
-
-    return
-
+def int_to_bracket(data, criterias):
+    pass
