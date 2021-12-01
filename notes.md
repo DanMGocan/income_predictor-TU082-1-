@@ -36,5 +36,10 @@ Must add an incrementor / decrementor when checking for age,
 capital gains or losses as the exact values might not be present
 inside the trained model
 
-Put together chart of data transition
+Put together chart of data transition in .ppt, to see how data is moved and modified (???)
+
+Export all information as an .html document
+
+Code that is easily adaptable with minimal modification
+
 

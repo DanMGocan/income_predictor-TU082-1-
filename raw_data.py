@@ -8,13 +8,74 @@ csvPath = "data/data_set.csv"
 current_time = datetime.now().strftime("%d/%m, at %H:%M:%S")
 current_day = datetime.today()
 
-def int_to_bracket(data, criterias):
-    pass
+# Function that converts [age] into brackets.
+# To convert age to brackets we have used subjective
+# values. 
+def age_to_bracket(data):
+    # Modify for age
+    age = int(data["Age"])
+    if age < 18:
+        return "Under 18"
+    elif age >= 18 and age <= 24:
+        return "18-24 years old"
+    elif age >= 25 and age <= 34:
+        return "25-34 years old"
+    elif age >= 35 and age <= 44:
+        return "35-44 years old"
+    elif age >= 45 and age <= 54:
+        return "45-54 years old"
+    elif age >= 55 and age <= 64:
+        return "55-54 years old"
+    else:
+        return "65 and over"
+    
+# Function that converts [capital_loss], [capital_gain], [hours_per_week] into brackets.
+# For this conversion we have taken the max of each category and,
+# through splitting the averages, we have created 9 possible categories
+def capital_to_bracket(data, value, type):
+    if type == "capital_gain":
+        capital = int(data["capital_gain"])
+        wording = "Capital gain"
+    elif type == "capital_loss":
+        capital = int(data["capital_loss"])
+        wording = "Capital loss"
+    elif type == "hours_per_week":
+        capital = int(data["hours_per_week"])
+        wording = "Hours per week"
 
+    if capital == 0:
+        return f"{wording} 0"
+    elif capital <= value / 8: 
+        return f"{wording} under {value / 8}"
+    elif capital <= value / 4: 
+        return f"{wording} under {value / 4}"
+    elif capital <= (value / 8 + value / 4):
+        return f"{wording} under {((value / 8) + (value / 4))}"
+    elif capital <= value / 2:
+        return f"{wording} under {value / 2}"
+    elif capital <= (value / 2 + value / 4):
+        return f"{wording} under {value / 2 + value / 4}"
+    elif capital <= (value / 2 + value / 4):
+        return f"{wording} under {value / 2 + value / 4}"
+    elif capital <= value - value / 8:
+        return f"{wording} under {value - value / 8}"
+    elif capital <= value:
+        return f"{wording} under {value + 1}"
+    else:
+        return f"Error - capital gain is {capital} and the value is {value}"
+        
 
 # Function to convert the .csv document to a dictionary
 def convert_data(initial_path):
     all_data = []
+
+    # In order to have organic brackets for capital gain, loss and hours worked,
+    # we are adding all the values to lists, and then finding the max. value of
+    # each.
+    all_capital_gain = []
+    all_capital_loss = []
+    all_hours_per_week = []
+
     deleted_entries = 0
     initial_data_len = 0
 
@@ -34,10 +95,6 @@ def convert_data(initial_path):
             if " ? " in row.values():
                 deleted_entries += 1
                 continue
-            
-            # Function that converts [age], [capital_loss], [capital_gain]
-            # and [hours_per_week] into categories. 
-            int_to_bracket(row, ["age", "capital_loss", "capital_gain", "hours_per_week"])
 
             # Creating a new dictionary from each entry in the .csv file, with the following modified:
             ## all integers have the correct data type (int from str)
@@ -46,7 +103,7 @@ def convert_data(initial_path):
             ## outcome has been added as a boolean 
 
             new_dict = {
-                "age": int(row["Age"]),
+                "age": age_to_bracket(row),
                 "workclass": row["Workclass"].replace(" ", ""),
                 "education_number": int(row["Education-number"]),
                 "marital_status": row["Marital-status"].replace(" ", ""),
@@ -55,12 +112,27 @@ def convert_data(initial_path):
                 "race": row["Race"].replace(" ", ""),
                 "gender": row["Gender"].replace(" ", ""),
                 "capital_gain": int(row["Capital-gain"]),
-                "capital_loss": -(int(row["Capital-loss"])), 
+                "capital_loss": int(row["Capital-loss"]), 
                 "hours_per_week": int(row["Hours-per-week"]),
                 "outcome": outcome
             }
 
+            # In order to find the minimum and the maximum capital gains / losses
+            # we append all the 
+            all_capital_gain.append(int(row["Capital-gain"]))
+            all_capital_loss.append(int(row["Capital-loss"]))
+            all_hours_per_week.append(int(row["Hours-per-week"]))
             all_data.append(new_dict)
+
+        max_capital = max(all_capital_gain)
+        min_capital = max(all_capital_loss)
+        max_hours = max(all_hours_per_week)
+
+        # Overwriting the values in capital_gain / loss with the position in the brackets
+        for element in all_data:
+            element["capital_gain"] = capital_to_bracket(element, max_capital, "capital_gain")
+            element["capital_loss"] = capital_to_bracket(element, min_capital, "capital_loss")
+            element["hours_per_week"] = capital_to_bracket(element, max_hours, "hours_per_week" )
 
     # Shuffling the data set every time the function is called
     random.shuffle(all_data)
