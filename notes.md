@@ -24,12 +24,6 @@ xx% of people of age XX have income > 50k
 xx% of white people have income > 50k
 etc. etc. etc.
 
-TUG OF WAR Optimization system, maybe? 
-- Basically, how much of being something affects your income?
-For example, gender. If 0.8 of male gender has an income over 50k, 
-then the male = gender variable will have a TUGOWAR pull of 0.8.
-If the gender is femaile, then the tugowar pull is 0.2. 
-
 Do not forget to add DOCSTRINT
 
 Must add an incrementor / decrementor when checking for age,
@@ -42,4 +36,8 @@ Export all information as an .html document
 
 Code that is easily adaptable with minimal modification
 
+Code should return html documents, with all the available information, structured in tables
 
+Maybe add rounding to categories
+
+Add all categories as some test data might have some extra categories that are not present in the initial set

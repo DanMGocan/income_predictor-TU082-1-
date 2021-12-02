@@ -1,23 +1,58 @@
+import random
 from model_train import unique_values
-from raw_data import test_data
+from split_data import test_data
+from data_to_html import html_result
 
-initial_over = 0
-initial_under = 0
 
-for element in test_data:
-    element["Tug-of-War"] = 0
-    if element["outcome"] == True:
-        initial_over += 1
-    elif element["outcome"] == False:
-        initial_under += 1
 
-print(initial_over, initial_under)
+test_results = []
 
-correct_values = 0
-wrong_values = 0
+def test_model(probabilities, test_data):
+    correct = 0
+    wrong = 0
+    for element in test_data:
 
-keys_to_test = ["workclass", "education_number", "marital_status", "occupation", "relationship", "gender"]
+        length_of_data = len(element.keys()) - 1
+        true_probability = 0
+        false_probability = 0
 
-for element in test_data:
-    for key, value in element.items():
-        pass
+        for key, value in element.items():
+            true_probability += probabilities[key][value]["Averages"]["TRUE probability"]
+            false_probability += probabilities[key][value]["Averages"]["FALSE probability"]
+        
+        random_factor = random.randint(0, 100)
+
+        element["True prob"] = round(true_probability  / length_of_data)
+        element["False prob"] = round(false_probability / length_of_data)
+        
+        if random_factor <= element["True prob"]:
+            element["TEST Outcome"] = True
+        else:
+            element["TEST Outcome"] = False
+        
+        if element["outcome"] == element["TEST Outcome"]:
+            correct += 1
+        else:
+            wrong += 1
+
+
+        test_results.append(element)
+        #print(true_probability / length_of_data, false_probability / length_of_data)
+
+    return test_results, correct, wrong
+
+
+
+result = test_model(unique_values, test_data)
+final = html_result(result[1], result[2])
+
+# f'''
+# # There were {result[1]} correct results and {result[2]} wrong results.
+# # The final success rate is {round((result[1] / (result[1] + result[2]) * 100), 2)}.
+# '''
+
+with open('data/test_results.py','w') as data:
+    data.write(str(result))
+
+with open('data/results.html','w') as data:
+    data.write(final)

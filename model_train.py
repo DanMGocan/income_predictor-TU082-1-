@@ -1,4 +1,4 @@
-from raw_data import train_data
+from split_data import train_data
 import time
 
     # 'age': 33, 
@@ -47,7 +47,6 @@ def find_unique_values(data):
             unique_values[key][value][outcome_state] += 1
                          
         print(f"Populating data. Processing item {counter}.")
-        time.sleep(0)
         counter += 1
 
     # For loop to calculate the tug-of-war value for each property
@@ -73,14 +72,14 @@ def find_unique_values(data):
                 truth_average = 50
 
             unique_values[element][key]["Averages"] = {
-                "truth_average": round(truth_average, 2),
-                "false_average": round(false_average, 2)
+                "TRUE probability": round(truth_average, 2),
+                "FALSE probability": round(false_average, 2)
             }
 
     return unique_values
 
 unique_values = find_unique_values(train_data)
 
-with open('data/unique_data.py','w') as data:
+with open('data/cart_values.py','w') as data:
     data.write(str(unique_values))
 
