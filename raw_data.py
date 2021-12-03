@@ -59,7 +59,6 @@ def capital_to_bracket(data, value, type):
         return f"{wording} under {value + 1}"
     else:
         return f"Error - capital gain is {capital} and the value is {value}"
-        
 
 # Function to convert the .csv document to a dictionary
 def convert_data(initial_path):

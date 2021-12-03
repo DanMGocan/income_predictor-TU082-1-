@@ -1,8 +1,12 @@
 import random
-from model_train import unique_values
-from split_data import test_data
+from model_train import unique_values as unique_values
+from split_data import test_data as test_data
 from data_to_html import html_result
+from data import meta_data
+from datetime import datetime
 
+current_time = datetime.now().strftime("%d/%m, at %H:%M:%S")
+current_day = datetime.today()
 
 
 test_results = []
@@ -39,20 +43,32 @@ def test_model(probabilities, test_data):
         test_results.append(element)
         #print(true_probability / length_of_data, false_probability / length_of_data)
 
-    return test_results, correct, wrong
+    percentage = correct / (correct + wrong)
+    return test_results, correct, wrong, percentage
 
 
-
-result = test_model(unique_values, test_data)
-final = html_result(result[1], result[2])
+# final = html_result(result[1], result[2])
 
 # f'''
 # # There were {result[1]} correct results and {result[2]} wrong results.
 # # The final success rate is {round((result[1] / (result[1] + result[2]) * 100), 2)}.
 # '''
 
-with open('data/test_results.py','w') as data:
-    data.write(str(result))
+# with open('data/test_results.py','w') as data:
+#     data.write(str(result))
 
-with open('data/results.html','w') as data:
-    data.write(final)
+# with open('data/results.html','w') as data:
+#     data.write(final)
+
+
+#result = test_model(unique_values, test_data)
+
+i = 0
+while i < 10:
+    try: 
+        print(test_model(unique_values, test_data))
+    except KeyError:
+        print("lol")
+    i += 1
+    
+
