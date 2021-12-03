@@ -1,17 +1,16 @@
 import random
-from model_train import unique_values as unique_values
-from split_data import test_data as test_data
-from data_to_html import html_result
-from data import meta_data
-from datetime import datetime
+from model_train import unique_values
+from split_data import test_data
 
+from data_to_html import html_result
+
+from datetime import datetime
 current_time = datetime.now().strftime("%d/%m, at %H:%M:%S")
 current_day = datetime.today()
 
 
-test_results = []
-
 def test_model(probabilities, test_data):
+    test_results = []
     correct = 0
     wrong = 0
     for element in test_data:
@@ -66,7 +65,8 @@ def test_model(probabilities, test_data):
 i = 0
 while i < 10:
     try: 
-        print(test_model(unique_values, test_data))
+        result = test_model(unique_values, test_data)
+        print(result[3])
     except KeyError:
         print("lol")
     i += 1

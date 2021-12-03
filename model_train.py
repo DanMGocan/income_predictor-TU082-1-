@@ -1,18 +1,4 @@
 from split_data import train_data
-import time
-
-    # 'age': 33, 
-    # 'workclass': 'Federal-gov',
-    # 'education_number': 10,
-    # 'marital_status': 'Divorced',
-    # 'occupation': 'Other-service',
-    # 'relationship': 'Not-in-family',
-    # 'race': 'Black',
-    # 'gender': 'Male',
-    # 'capital_gain': 0,
-    # 'capital_loss': 0,
-    # 'hours_per_week': 40,
-    # 'outcome': False
 
 train_data_length = len(train_data)
 
@@ -46,7 +32,6 @@ def find_unique_values(data):
         for key, value in element.items():
             unique_values[key][value][outcome_state] += 1
                          
-        print(f"Populating data. Processing item {counter}.")
         counter += 1
 
     # For loop to calculate the tug-of-war value for each property
