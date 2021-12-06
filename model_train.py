@@ -19,18 +19,15 @@ def find_unique_values(data):
         "hours_per_week": {},
         "outcome": {}
     }
- 
-    # Adding empty dictionaries to each entry
-    for element in data:   
-        for key, value in element.items():
-            unique_values[key][value] = {"True": 0, "False": 0}
-            
+             
     # Calculating the occurrence of each entry
     for element in data:    
         outcome_state = str(element["outcome"])
-
         for key, value in element.items():
-            unique_values[key][value][outcome_state] += 1
+            try:
+                unique_values[key][value][outcome_state] += 1
+            except KeyError:
+               unique_values[key][value] = {"True": 0, "False": 0}
                          
         counter += 1
 
