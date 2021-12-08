@@ -15,9 +15,12 @@ def test_model(probabilities, test_data):
         false_probability = 0
 
         for key, value in element.items():
-            true_probability += probabilities[key][value]["Averages"]["TRUE probability"]
-            false_probability += probabilities[key][value]["Averages"]["FALSE probability"]
-        
+            try:
+                true_probability += probabilities[key][value]["Averages"]["TRUE probability"]
+                false_probability += probabilities[key][value]["Averages"]["FALSE probability"]
+            except KeyError:
+                continue
+            
         element["True prob"] = round(true_probability  / length_of_data)
         element["False prob"] = round(false_probability / length_of_data)
         

@@ -41,3 +41,5 @@ Code should return html documents, with all the available information, structure
 Maybe add rounding to categories
 
 Add all categories as some test data might have some extra categories that are not present in the initial set
+
+Add time variables, time of execution, etc. 
