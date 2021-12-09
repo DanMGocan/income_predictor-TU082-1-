@@ -9,7 +9,7 @@ def split_data(initial_data, training_percentage):
     test_data = initial_data[int((len(initial_data)+1)*(training_percentage / 100)):] 
     return train_data, test_data
 
-divided_data = split_data(all_data["all_data"], 50)
+divided_data = split_data(all_data["all_data"], 80)
 
 train_data = divided_data[0]
 test_data = divided_data[1]
@@ -19,9 +19,9 @@ meta_data = {
     "valid_data_length": len(all_data["all_data"]),
     "deleted_entries": all_data["deleted_entries"],
     "train_data_length": len(train_data),
-    "Test data length": len(test_data),
-    "Created on": current_time,
-    "Amount of Categories": all_data["amount_of_categories"],
+    "test_data_length": len(test_data),
+    "created_on": current_time,
+    "amount_of_categories": all_data["amount_of_categories"],
     "amount_of_values": all_data["amount_of_values"]
 }
 

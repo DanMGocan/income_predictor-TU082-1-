@@ -40,18 +40,6 @@ def test_model(probabilities, test_data):
     return test_results, correct, wrong, percentage
 
 result = test_model(unique_values, test_data)
-
-# final = html_result(result[1], result[2])
-
-#result = test_model(unique_values, test_data)
-
-# i = 0
-# while i < 10:
-#     try: 
-#         result = test_model(unique_values, test_data)
-#         print(result[3])
-#     except KeyError:
-#         print("lol")
-#     i += 1
-    
+with open('data/test_results.py','w') as data:
+    data.write(str(result))
 
