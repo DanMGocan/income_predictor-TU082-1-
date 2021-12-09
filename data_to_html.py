@@ -1,11 +1,13 @@
 
 from split_data import meta_data, test_data, train_data
 from model_test import result
+from model_train import unique_values
+from time_imports import times
 import random
 
 def meta_data_to_html_table(data):
-    string = f'''
-    <section class="col-4 my-4 py-4">
+    return f'''
+    <section class="col-6 my-4 py-4">
     <h4 class="p-0 m-0">Table with the available meta data</h4>
     <table class="table table-sm table-striped ">
         <tr>
@@ -32,26 +34,43 @@ def meta_data_to_html_table(data):
             <th scope="row">Length of test data set:</th>
             <td>{data["test_data_length"]}</td>
         <tr>
+    </table></section>
     '''
 
-    string2 = ""
-    
-    for key, value in data.items():
-            if key not in ["all_data_length", "valid_data_length", "deleted_entries", "train_data_length", "test_data_length", "created_on", "amount_of_categories"]:
-                for parent_key, child_value in value.items():
-                    for parent_key_2, child_value_2 in child_value.items():
-                        string2 += f'''
-                        <tr>
-                            <th scope="row">{parent_key_2}</th>
-                            <td>{child_value_2}</td>
-                        </tr>
-                        '''
-
+def meta_categories_to_html(data):
+    string = f'''
+    <section class="col-6">
+    <h4>Tables with the amount of individual values, for each category</h4>
+    '''
+    str_to_add = ""
+    for key, value in data["amount_of_values"].items():
+            str_to_add += f'''
+            <div class="pb-3"></div>
+                <table class="table table-sm table-striped">
+                    <th scope="row">{key.replace("_", " ").title()}</th>
+                    <th scope="row"># of members</th>
+                    <th scope="row">Success rate</th>
+                    <th scope="row">Failure rate</th>
+                    '''
+            for parent_key, child_value in value.items():
+                    str_to_add += f'''
+                    <tr>
+                        <td>{parent_key}</td>
+                        <td>{child_value}</td>
+                        <td>{unique_values[key][parent_key]["Averages"]["TRUE probability"]}%</td>
+                        <td>{unique_values[key][parent_key]["Averages"]["FALSE probability"]}%</td>
+                    </tr> 
+                    '''
+ 
+    string += str_to_add
     return string + "</table></section>"
 
 def test_results_to_html_table(data):
     string = f'''
+    '''
 
+def time_performance(data):
+    string = f'''
     '''
 
 def dict_to_html_table(data, sample_size, data_type):
@@ -98,11 +117,11 @@ def dict_to_html_table(data, sample_size, data_type):
             </tr>
             '''
         entry_counter += 1
-        
     return string + "</table></section>"
 
 training_data_table = dict_to_html_table(train_data, 25, "training data")
 meta_data_table = meta_data_to_html_table(meta_data)
+meta_categories = meta_categories_to_html(meta_data)
 
 def html(correct, wrong):
     percentage = correct / (correct + wrong)
@@ -120,8 +139,9 @@ def html(correct, wrong):
                 <title>TU Classifier, results</title>
             </head>
             <body class="mx-auto col-10">
-
                 {meta_data_table}
+                <br>
+                {meta_categories}
                 <br>
                 {training_data_table}
 
@@ -140,9 +160,3 @@ def html(correct, wrong):
     '''
 
 html_result = html(result[1], result[2])
-
-#  <h1>Classifier success rate:</h1>
-#                 <p>Correct results: {correct}</p>
-#                 <p>Wrong results: {wrong}</p>
-#                 <p>Success percentage: {round(percentage * 100, 2)}</p>
-#                 <p>Test ran on: {meta_data["Created on"]}</p>

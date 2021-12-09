@@ -67,7 +67,6 @@ def convert_data(initial_path):
     all_data = []
 
     # Performance monitoring 
-    t1 = time.perf_counter()
 
     # In order to have organic brackets for capital gain, loss and hours worked,
     # we are adding all the values to lists, and then finding the max. value of
@@ -160,12 +159,12 @@ def convert_data(initial_path):
         "initial_data_len": initial_data_len,
         "amount_of_categories": amount_of_categories,
         "amount_of_values": amount_of_values,
-        "initial_time": t1
+        "initial_time": t0
     }
 
-    t2 = time.perf_counter()
     return return_object
 
+t0 = time.perf_counter()
 all_data = convert_data(csvPath)
 
 

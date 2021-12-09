@@ -1,5 +1,6 @@
 from raw_data import all_data
 from datetime import datetime
+import time
 
 current_time = datetime.now().strftime("%d/%m, at %H:%M:%S")
 current_day = datetime.today()
@@ -8,6 +9,8 @@ def split_data(initial_data, training_percentage):
     train_data = initial_data[ : int((len(initial_data)+1)*(training_percentage / 100))] 
     test_data = initial_data[int((len(initial_data)+1)*(training_percentage / 100)):] 
     return train_data, test_data
+
+t1 = time.perf_counter()
 
 divided_data = split_data(all_data["all_data"], 80)
 

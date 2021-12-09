@@ -1,4 +1,4 @@
-import random
+import time
 from model_train import unique_values
 from split_data import test_data
 
@@ -39,6 +39,7 @@ def test_model(probabilities, test_data):
     percentage = correct / (correct + wrong)
     return test_results, correct, wrong, percentage
 
+t3 = time.perf_counter()
 result = test_model(unique_values, test_data)
 with open('data/test_results.py','w') as data:
     data.write(str(result))

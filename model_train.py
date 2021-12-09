@@ -1,4 +1,5 @@
 from split_data import train_data
+import time
 
 train_data_length = len(train_data)
 
@@ -60,6 +61,7 @@ def find_unique_values(data):
 
     return unique_values
 
+t2 = time.perf_counter()
 unique_values = find_unique_values(train_data)
 
 with open('data/cart_values.py','w') as data:

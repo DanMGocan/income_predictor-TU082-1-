@@ -3,6 +3,7 @@ import time
 from raw_data import all_data
 from data_to_html import html_result
 from model_test import result
+from time_imports import times
 
 def execute():
     t1 = all_data["initial_time"]
@@ -16,6 +17,8 @@ def execute():
     with open('data/results.html','w') as data:
         data.write(html_result)
 
-    return results
+    return results, "Program execution complete!"
 
+t4 = time.perf_counter()
 print(execute())
+print(times)
