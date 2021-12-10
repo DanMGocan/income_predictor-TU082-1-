@@ -12,14 +12,13 @@
                 <title>TU Classifier, results</title>
             </head>
             <body class="mx-auto col-10">
-
                 
-    <section class="col-6 my-4 py-4">
+    <section class="col-6">
     <h4 class="p-0 m-0">Table with the available meta data</h4>
     <table class="table table-sm table-striped ">
         <tr>
             <th scope="row">Executed on:</th>
-            <td>09/12, at 22:36:59</td>
+            <td>10/12, at 11:34:05</td>
         <tr>
         <tr>
             <th scope="row">Initial amount of data entries:</th>
@@ -46,7 +45,31 @@
                 <br>
                 
     <section class="col-6">
-    <h4>Tables with the amount of individual values, for each category</h4>
+    <h4 class="p-0 m-0">Table with the execution times</h4>
+    <table class="table table-sm table-striped">
+        <tr>
+            <th scope="col">To initialize, clean and convert data:</th>
+            <td>0.43 seconds</td>
+        <tr>
+        <tr>
+            <th scope="col">To split the data:</th>
+            <td>0.189 seconds</td>
+        <tr>
+        <tr>
+            <th scope="col">To train the model (performing analysis on 24130) data entries:</th>
+            <td>0.069 seconds</td>
+        <tr>
+        <tr>
+            <th scope="col">To test the model (performing analysis on 6032) data entries:</th>
+            <td>0.072 seconds</td>
+        <tr>
+    </table>
+    </section>
+    
+                <br>
+                
+    <section class="col-6">
+    <h4 class="p-0 m-0">Tables with the amount of individual values, for each category</h4>
     
             <div class="pb-3"></div>
                 <table class="table table-sm table-striped">
@@ -56,45 +79,45 @@
                     <th scope="row">Failure rate</th>
                     
                     <tr>
-                        <td>35-44 years old</td>
-                        <td>7806</td>
-                        <td>33.34%</td>
-                        <td>66.66%</td>
+                        <td>45-54 years old</td>
+                        <td>5621</td>
+                        <td>40.0%</td>
+                        <td>60.0%</td>
                     </tr> 
                     
                     <tr>
-                        <td>55-54 years old</td>
-                        <td>2849</td>
-                        <td>32.62%</td>
-                        <td>67.38%</td>
+                        <td>18-24 years old</td>
+                        <td>4540</td>
+                        <td>1.29%</td>
+                        <td>98.71%</td>
+                    </tr> 
+                    
+                    <tr>
+                        <td>35-44 years old</td>
+                        <td>7807</td>
+                        <td>33.48%</td>
+                        <td>66.52%</td>
                     </tr> 
                     
                     <tr>
                         <td>25-34 years old</td>
                         <td>8041</td>
-                        <td>16.91%</td>
-                        <td>83.09%</td>
-                    </tr> 
-                    
-                    <tr>
-                        <td>18-24 years old</td>
-                        <td>4541</td>
-                        <td>1.35%</td>
-                        <td>98.65%</td>
-                    </tr> 
-                    
-                    <tr>
-                        <td>45-54 years old</td>
-                        <td>5621</td>
-                        <td>41.08%</td>
-                        <td>58.92%</td>
+                        <td>17.35%</td>
+                        <td>82.65%</td>
                     </tr> 
                     
                     <tr>
                         <td>65 and over</td>
                         <td>975</td>
-                        <td>22.88%</td>
-                        <td>77.12%</td>
+                        <td>22.37%</td>
+                        <td>77.63%</td>
+                    </tr> 
+                    
+                    <tr>
+                        <td>55-54 years old</td>
+                        <td>2849</td>
+                        <td>32.3%</td>
+                        <td>67.7%</td>
                     </tr> 
                     
                     <tr>
@@ -114,43 +137,43 @@
                     <tr>
                         <td>Private</td>
                         <td>22285</td>
-                        <td>21.87%</td>
-                        <td>78.13%</td>
-                    </tr> 
-                    
-                    <tr>
-                        <td>Local-gov</td>
-                        <td>2067</td>
-                        <td>29.94%</td>
-                        <td>70.06%</td>
-                    </tr> 
-                    
-                    <tr>
-                        <td>Federal-gov</td>
-                        <td>943</td>
-                        <td>37.56%</td>
-                        <td>62.44%</td>
-                    </tr> 
-                    
-                    <tr>
-                        <td>State-gov</td>
-                        <td>1279</td>
-                        <td>26.8%</td>
-                        <td>73.2%</td>
-                    </tr> 
-                    
-                    <tr>
-                        <td>Self-emp-not-inc</td>
-                        <td>2499</td>
-                        <td>28.34%</td>
-                        <td>71.66%</td>
+                        <td>21.64%</td>
+                        <td>78.36%</td>
                     </tr> 
                     
                     <tr>
                         <td>Self-emp-inc</td>
                         <td>1074</td>
-                        <td>54.24%</td>
-                        <td>45.76%</td>
+                        <td>55.45%</td>
+                        <td>44.55%</td>
+                    </tr> 
+                    
+                    <tr>
+                        <td>Federal-gov</td>
+                        <td>943</td>
+                        <td>38.35%</td>
+                        <td>61.65%</td>
+                    </tr> 
+                    
+                    <tr>
+                        <td>State-gov</td>
+                        <td>1279</td>
+                        <td>26.68%</td>
+                        <td>73.32%</td>
+                    </tr> 
+                    
+                    <tr>
+                        <td>Local-gov</td>
+                        <td>2067</td>
+                        <td>30.06%</td>
+                        <td>69.94%</td>
+                    </tr> 
+                    
+                    <tr>
+                        <td>Self-emp-not-inc</td>
+                        <td>2499</td>
+                        <td>29.28%</td>
+                        <td>70.72%</td>
                     </tr> 
                     
                     <tr>
@@ -168,66 +191,108 @@
                     <th scope="row">Failure rate</th>
                     
                     <tr>
-                        <td>12</td>
-                        <td>1008</td>
-                        <td>26.14%</td>
-                        <td>73.86%</td>
+                        <td>9</td>
+                        <td>9839</td>
+                        <td>16.34%</td>
+                        <td>83.66%</td>
                     </tr> 
                     
                     <tr>
-                        <td>9</td>
-                        <td>9840</td>
-                        <td>16.36%</td>
-                        <td>83.64%</td>
+                        <td>15</td>
+                        <td>542</td>
+                        <td>74.6%</td>
+                        <td>25.4%</td>
+                    </tr> 
+                    
+                    <tr>
+                        <td>13</td>
+                        <td>5044</td>
+                        <td>42.39%</td>
+                        <td>57.61%</td>
+                    </tr> 
+                    
+                    <tr>
+                        <td>12</td>
+                        <td>1008</td>
+                        <td>24.14%</td>
+                        <td>75.86%</td>
+                    </tr> 
+                    
+                    <tr>
+                        <td>8</td>
+                        <td>377</td>
+                        <td>6.09%</td>
+                        <td>93.91%</td>
                     </tr> 
                     
                     <tr>
                         <td>10</td>
                         <td>6678</td>
-                        <td>20.29%</td>
-                        <td>79.71%</td>
+                        <td>19.94%</td>
+                        <td>80.06%</td>
                     </tr> 
                     
                     <tr>
                         <td>11</td>
                         <td>1307</td>
-                        <td>26.79%</td>
-                        <td>73.21%</td>
-                    </tr> 
-                    
-                    <tr>
-                        <td>13</td>
-                        <td>5043</td>
-                        <td>41.78%</td>
-                        <td>58.22%</td>
-                    </tr> 
-                    
-                    <tr>
-                        <td>14</td>
-                        <td>1627</td>
-                        <td>56.53%</td>
-                        <td>43.47%</td>
+                        <td>27.28%</td>
+                        <td>72.72%</td>
                     </tr> 
                     
                     <tr>
                         <td>6</td>
                         <td>820</td>
-                        <td>6.26%</td>
-                        <td>93.74%</td>
+                        <td>7.35%</td>
+                        <td>92.65%</td>
                     </tr> 
                     
                     <tr>
-                        <td>7</td>
-                        <td>1048</td>
-                        <td>5.61%</td>
-                        <td>94.39%</td>
+                        <td>5</td>
+                        <td>455</td>
+                        <td>5.16%</td>
+                        <td>94.84%</td>
+                    </tr> 
+                    
+                    <tr>
+                        <td>4</td>
+                        <td>557</td>
+                        <td>5.23%</td>
+                        <td>94.77%</td>
+                    </tr> 
+                    
+                    <tr>
+                        <td>14</td>
+                        <td>1627</td>
+                        <td>56.12%</td>
+                        <td>43.88%</td>
                     </tr> 
                     
                     <tr>
                         <td>16</td>
                         <td>375</td>
-                        <td>72.6%</td>
-                        <td>27.4%</td>
+                        <td>73.81%</td>
+                        <td>26.19%</td>
+                    </tr> 
+                    
+                    <tr>
+                        <td>2</td>
+                        <td>151</td>
+                        <td>4.13%</td>
+                        <td>95.87%</td>
+                    </tr> 
+                    
+                    <tr>
+                        <td>7</td>
+                        <td>1048</td>
+                        <td>5.42%</td>
+                        <td>94.58%</td>
+                    </tr> 
+                    
+                    <tr>
+                        <td>3</td>
+                        <td>288</td>
+                        <td>3.95%</td>
+                        <td>96.05%</td>
                     </tr> 
                     
                     <tr>
@@ -235,48 +300,6 @@
                         <td>45</td>
                         <td>0.0%</td>
                         <td>100.0%</td>
-                    </tr> 
-                    
-                    <tr>
-                        <td>5</td>
-                        <td>455</td>
-                        <td>6.02%</td>
-                        <td>93.98%</td>
-                    </tr> 
-                    
-                    <tr>
-                        <td>4</td>
-                        <td>557</td>
-                        <td>6.0%</td>
-                        <td>94.0%</td>
-                    </tr> 
-                    
-                    <tr>
-                        <td>15</td>
-                        <td>542</td>
-                        <td>73.36%</td>
-                        <td>26.64%</td>
-                    </tr> 
-                    
-                    <tr>
-                        <td>8</td>
-                        <td>377</td>
-                        <td>6.21%</td>
-                        <td>93.79%</td>
-                    </tr> 
-                    
-                    <tr>
-                        <td>3</td>
-                        <td>288</td>
-                        <td>5.17%</td>
-                        <td>94.83%</td>
-                    </tr> 
-                    
-                    <tr>
-                        <td>2</td>
-                        <td>151</td>
-                        <td>5.08%</td>
-                        <td>94.92%</td>
                     </tr> 
                     
             <div class="pb-3"></div>
@@ -289,50 +312,50 @@
                     <tr>
                         <td>Married-civ-spouse</td>
                         <td>14065</td>
-                        <td>45.48%</td>
-                        <td>54.52%</td>
+                        <td>45.38%</td>
+                        <td>54.62%</td>
                     </tr> 
                     
                     <tr>
                         <td>Never-married</td>
                         <td>9725</td>
-                        <td>4.88%</td>
-                        <td>95.12%</td>
+                        <td>4.8%</td>
+                        <td>95.2%</td>
                     </tr> 
                     
                     <tr>
                         <td>Divorced</td>
                         <td>4214</td>
-                        <td>10.52%</td>
-                        <td>89.48%</td>
-                    </tr> 
-                    
-                    <tr>
-                        <td>Married-spouse-absent</td>
-                        <td>370</td>
-                        <td>8.78%</td>
-                        <td>91.22%</td>
-                    </tr> 
-                    
-                    <tr>
-                        <td>Separated</td>
-                        <td>939</td>
-                        <td>7.31%</td>
-                        <td>92.69%</td>
+                        <td>10.98%</td>
+                        <td>89.02%</td>
                     </tr> 
                     
                     <tr>
                         <td>Widowed</td>
                         <td>827</td>
-                        <td>10.02%</td>
-                        <td>89.98%</td>
+                        <td>9.17%</td>
+                        <td>90.83%</td>
+                    </tr> 
+                    
+                    <tr>
+                        <td>Married-spouse-absent</td>
+                        <td>370</td>
+                        <td>9.15%</td>
+                        <td>90.85%</td>
+                    </tr> 
+                    
+                    <tr>
+                        <td>Separated</td>
+                        <td>939</td>
+                        <td>7.79%</td>
+                        <td>92.21%</td>
                     </tr> 
                     
                     <tr>
                         <td>Married-AF-spouse</td>
                         <td>21</td>
-                        <td>50%</td>
-                        <td>50%</td>
+                        <td>60.0%</td>
+                        <td>40.0%</td>
                     </tr> 
                     
             <div class="pb-3"></div>
@@ -343,80 +366,87 @@
                     <th scope="row">Failure rate</th>
                     
                     <tr>
-                        <td>Tech-support</td>
-                        <td>912</td>
-                        <td>30.08%</td>
-                        <td>69.92%</td>
+                        <td>Farming-fishing</td>
+                        <td>989</td>
+                        <td>11.13%</td>
+                        <td>88.87%</td>
                     </tr> 
                     
                     <tr>
                         <td>Craft-repair</td>
                         <td>4030</td>
-                        <td>22.59%</td>
-                        <td>77.41%</td>
-                    </tr> 
-                    
-                    <tr>
-                        <td>Sales</td>
-                        <td>3584</td>
-                        <td>26.51%</td>
-                        <td>73.49%</td>
-                    </tr> 
-                    
-                    <tr>
-                        <td>Other-service</td>
-                        <td>3212</td>
-                        <td>4.28%</td>
-                        <td>95.72%</td>
-                    </tr> 
-                    
-                    <tr>
-                        <td>Prof-specialty</td>
-                        <td>4037</td>
-                        <td>44.56%</td>
-                        <td>55.44%</td>
-                    </tr> 
-                    
-                    <tr>
-                        <td>Exec-managerial</td>
-                        <td>3992</td>
-                        <td>48.62%</td>
-                        <td>51.38%</td>
-                    </tr> 
-                    
-                    <tr>
-                        <td>Transport-moving</td>
-                        <td>1572</td>
-                        <td>19.49%</td>
-                        <td>80.51%</td>
+                        <td>22.68%</td>
+                        <td>77.32%</td>
                     </tr> 
                     
                     <tr>
                         <td>Adm-clerical</td>
                         <td>3721</td>
-                        <td>13.48%</td>
-                        <td>86.52%</td>
+                        <td>13.05%</td>
+                        <td>86.95%</td>
+                    </tr> 
+                    
+                    <tr>
+                        <td>Exec-managerial</td>
+                        <td>3992</td>
+                        <td>47.64%</td>
+                        <td>52.36%</td>
+                    </tr> 
+                    
+                    <tr>
+                        <td>Prof-specialty</td>
+                        <td>4038</td>
+                        <td>44.92%</td>
+                        <td>55.08%</td>
+                    </tr> 
+                    
+                    <tr>
+                        <td>Sales</td>
+                        <td>3584</td>
+                        <td>27.55%</td>
+                        <td>72.45%</td>
                     </tr> 
                     
                     <tr>
                         <td>Machine-op-inspct</td>
-                        <td>1966</td>
-                        <td>12.83%</td>
-                        <td>87.17%</td>
+                        <td>1965</td>
+                        <td>12.59%</td>
+                        <td>87.41%</td>
                     </tr> 
                     
                     <tr>
-                        <td>Farming-fishing</td>
-                        <td>989</td>
-                        <td>11.5%</td>
-                        <td>88.5%</td>
+                        <td>Other-service</td>
+                        <td>3212</td>
+                        <td>4.31%</td>
+                        <td>95.69%</td>
+                    </tr> 
+                    
+                    <tr>
+                        <td>Transport-moving</td>
+                        <td>1572</td>
+                        <td>19.26%</td>
+                        <td>80.74%</td>
                     </tr> 
                     
                     <tr>
                         <td>Handlers-cleaners</td>
                         <td>1350</td>
-                        <td>6.47%</td>
-                        <td>93.53%</td>
+                        <td>5.93%</td>
+                        <td>94.07%</td>
+                    </tr> 
+                    
+                    <tr>
+                        <td>Protective-serv</td>
+                        <td>644</td>
+                        <td>33.4%</td>
+                        <td>66.6%</td>
+                    </tr> 
+                    
+                    <tr>
+                        <td>Tech-support</td>
+                        <td>912</td>
+                        <td>31.11%</td>
+                        <td>68.89%</td>
                     </tr> 
                     
                     <tr>
@@ -427,17 +457,10 @@
                     </tr> 
                     
                     <tr>
-                        <td>Protective-serv</td>
-                        <td>644</td>
-                        <td>32.55%</td>
-                        <td>67.45%</td>
-                    </tr> 
-                    
-                    <tr>
                         <td>Armed-Forces</td>
                         <td>9</td>
-                        <td>0.0%</td>
-                        <td>100.0%</td>
+                        <td>14.29%</td>
+                        <td>85.71%</td>
                     </tr> 
                     
             <div class="pb-3"></div>
@@ -450,43 +473,43 @@
                     <tr>
                         <td>Husband</td>
                         <td>12463</td>
-                        <td>45.58%</td>
-                        <td>54.42%</td>
-                    </tr> 
-                    
-                    <tr>
-                        <td>Unmarried</td>
-                        <td>3212</td>
-                        <td>6.91%</td>
-                        <td>93.09%</td>
-                    </tr> 
-                    
-                    <tr>
-                        <td>Own-child</td>
-                        <td>4466</td>
-                        <td>1.54%</td>
-                        <td>98.46%</td>
-                    </tr> 
-                    
-                    <tr>
-                        <td>Not-in-family</td>
-                        <td>7725</td>
-                        <td>10.51%</td>
-                        <td>89.49%</td>
-                    </tr> 
-                    
-                    <tr>
-                        <td>Wife</td>
-                        <td>1406</td>
-                        <td>48.99%</td>
-                        <td>51.01%</td>
+                        <td>45.39%</td>
+                        <td>54.61%</td>
                     </tr> 
                     
                     <tr>
                         <td>Other-relative</td>
                         <td>889</td>
-                        <td>3.88%</td>
-                        <td>96.12%</td>
+                        <td>4.21%</td>
+                        <td>95.79%</td>
+                    </tr> 
+                    
+                    <tr>
+                        <td>Not-in-family</td>
+                        <td>7725</td>
+                        <td>10.82%</td>
+                        <td>89.18%</td>
+                    </tr> 
+                    
+                    <tr>
+                        <td>Unmarried</td>
+                        <td>3212</td>
+                        <td>6.63%</td>
+                        <td>93.37%</td>
+                    </tr> 
+                    
+                    <tr>
+                        <td>Own-child</td>
+                        <td>4466</td>
+                        <td>1.53%</td>
+                        <td>98.47%</td>
+                    </tr> 
+                    
+                    <tr>
+                        <td>Wife</td>
+                        <td>1406</td>
+                        <td>49.28%</td>
+                        <td>50.72%</td>
                     </tr> 
                     
             <div class="pb-3"></div>
@@ -498,37 +521,37 @@
                     
                     <tr>
                         <td>White</td>
-                        <td>25933</td>
-                        <td>26.24%</td>
-                        <td>73.76%</td>
-                    </tr> 
-                    
-                    <tr>
-                        <td>Black</td>
-                        <td>2816</td>
-                        <td>13.3%</td>
-                        <td>86.7%</td>
-                    </tr> 
-                    
-                    <tr>
-                        <td>Amer-Indian-Eskimo</td>
-                        <td>286</td>
-                        <td>13.68%</td>
-                        <td>86.32%</td>
+                        <td>25932</td>
+                        <td>26.19%</td>
+                        <td>73.81%</td>
                     </tr> 
                     
                     <tr>
                         <td>Asian-Pac-Islander</td>
                         <td>895</td>
-                        <td>26.96%</td>
-                        <td>73.04%</td>
+                        <td>28.13%</td>
+                        <td>71.87%</td>
+                    </tr> 
+                    
+                    <tr>
+                        <td>Black</td>
+                        <td>2817</td>
+                        <td>12.77%</td>
+                        <td>87.23%</td>
+                    </tr> 
+                    
+                    <tr>
+                        <td>Amer-Indian-Eskimo</td>
+                        <td>286</td>
+                        <td>11.02%</td>
+                        <td>88.98%</td>
                     </tr> 
                     
                     <tr>
                         <td>Other</td>
                         <td>231</td>
-                        <td>8.63%</td>
-                        <td>91.37%</td>
+                        <td>9.23%</td>
+                        <td>90.77%</td>
                     </tr> 
                     
             <div class="pb-3"></div>
@@ -540,16 +563,16 @@
                     
                     <tr>
                         <td>Male</td>
-                        <td>20380</td>
-                        <td>31.3%</td>
-                        <td>68.7%</td>
+                        <td>20379</td>
+                        <td>31.15%</td>
+                        <td>68.85%</td>
                     </tr> 
                     
                     <tr>
                         <td>Female</td>
-                        <td>9781</td>
-                        <td>11.4%</td>
-                        <td>88.6%</td>
+                        <td>9782</td>
+                        <td>11.35%</td>
+                        <td>88.65%</td>
                     </tr> 
                     
             <div class="pb-3"></div>
@@ -562,22 +585,8 @@
                     <tr>
                         <td>Capital gain 0</td>
                         <td>27623</td>
-                        <td>21.38%</td>
-                        <td>78.62%</td>
-                    </tr> 
-                    
-                    <tr>
-                        <td>Capital gain under 12499.875</td>
-                        <td>1866</td>
-                        <td>49.37%</td>
-                        <td>50.63%</td>
-                    </tr> 
-                    
-                    <tr>
-                        <td>Capital gain under 24999.75</td>
-                        <td>474</td>
-                        <td>100.0%</td>
-                        <td>0.0%</td>
+                        <td>21.23%</td>
+                        <td>78.77%</td>
                     </tr> 
                     
                     <tr>
@@ -588,17 +597,31 @@
                     </tr> 
                     
                     <tr>
+                        <td>Capital gain under 12499.875</td>
+                        <td>1866</td>
+                        <td>50.23%</td>
+                        <td>49.77%</td>
+                    </tr> 
+                    
+                    <tr>
+                        <td>Capital gain under 24999.75</td>
+                        <td>474</td>
+                        <td>99.73%</td>
+                        <td>0.27%</td>
+                    </tr> 
+                    
+                    <tr>
                         <td>Capital gain under 37499.625</td>
                         <td>48</td>
-                        <td>95.24%</td>
-                        <td>4.76%</td>
+                        <td>94.12%</td>
+                        <td>5.88%</td>
                     </tr> 
                     
                     <tr>
                         <td>Capital gain under 49999.5</td>
                         <td>2</td>
-                        <td>50%</td>
-                        <td>50%</td>
+                        <td>0.0%</td>
+                        <td>100.0%</td>
                     </tr> 
                     
             <div class="pb-3"></div>
@@ -609,13 +632,6 @@
                     <th scope="row">Failure rate</th>
                     
                     <tr>
-                        <td>Capital loss under 2178.0</td>
-                        <td>928</td>
-                        <td>61.19%</td>
-                        <td>38.81%</td>
-                    </tr> 
-                    
-                    <tr>
                         <td>Capital loss 0</td>
                         <td>28734</td>
                         <td>23.42%</td>
@@ -623,24 +639,24 @@
                     </tr> 
                     
                     <tr>
-                        <td>Capital loss under 3267.0</td>
-                        <td>200</td>
-                        <td>60.48%</td>
-                        <td>39.52%</td>
-                    </tr> 
-                    
-                    <tr>
-                        <td>Capital loss under 1089.0</td>
-                        <td>25</td>
-                        <td>10.0%</td>
-                        <td>90.0%</td>
+                        <td>Capital loss under 2178.0</td>
+                        <td>928</td>
+                        <td>58.91%</td>
+                        <td>41.09%</td>
                     </tr> 
                     
                     <tr>
                         <td>Capital loss under 1633.5</td>
                         <td>258</td>
-                        <td>20.57%</td>
-                        <td>79.43%</td>
+                        <td>21.78%</td>
+                        <td>78.22%</td>
+                    </tr> 
+                    
+                    <tr>
+                        <td>Capital loss under 3267.0</td>
+                        <td>200</td>
+                        <td>63.09%</td>
+                        <td>36.91%</td>
                     </tr> 
                     
                     <tr>
@@ -648,6 +664,13 @@
                         <td>9</td>
                         <td>0.0%</td>
                         <td>100.0%</td>
+                    </tr> 
+                    
+                    <tr>
+                        <td>Capital loss under 1089.0</td>
+                        <td>25</td>
+                        <td>10.53%</td>
+                        <td>89.47%</td>
                     </tr> 
                     
                     <tr>
@@ -660,8 +683,8 @@
                     <tr>
                         <td>Capital loss under 3811.5</td>
                         <td>4</td>
-                        <td>0.0%</td>
-                        <td>100.0%</td>
+                        <td>50%</td>
+                        <td>50%</td>
                     </tr> 
                     
             <div class="pb-3"></div>
@@ -674,50 +697,50 @@
                     <tr>
                         <td>Hours per week under 74.25</td>
                         <td>5798</td>
-                        <td>43.89%</td>
-                        <td>56.11%</td>
+                        <td>43.77%</td>
+                        <td>56.23%</td>
                     </tr> 
                     
                     <tr>
                         <td>Hours per week under 49.5</td>
                         <td>17747</td>
-                        <td>23.83%</td>
-                        <td>76.17%</td>
-                    </tr> 
-                    
-                    <tr>
-                        <td>Hours per week under 24.75</td>
-                        <td>2030</td>
-                        <td>6.56%</td>
-                        <td>93.44%</td>
+                        <td>24.03%</td>
+                        <td>75.97%</td>
                     </tr> 
                     
                     <tr>
                         <td>Hours per week under 37.125</td>
                         <td>3534</td>
-                        <td>11.02%</td>
-                        <td>88.98%</td>
+                        <td>10.8%</td>
+                        <td>89.2%</td>
+                    </tr> 
+                    
+                    <tr>
+                        <td>Hours per week under 24.75</td>
+                        <td>2030</td>
+                        <td>6.2%</td>
+                        <td>93.8%</td>
                     </tr> 
                     
                     <tr>
                         <td>Hours per week under 12.375</td>
                         <td>657</td>
-                        <td>7.01%</td>
-                        <td>92.99%</td>
-                    </tr> 
-                    
-                    <tr>
-                        <td>Hours per week under 100</td>
-                        <td>136</td>
-                        <td>31.07%</td>
-                        <td>68.93%</td>
+                        <td>6.3%</td>
+                        <td>93.7%</td>
                     </tr> 
                     
                     <tr>
                         <td>Hours per week under 86.625</td>
                         <td>259</td>
-                        <td>35.89%</td>
-                        <td>64.11%</td>
+                        <td>33.33%</td>
+                        <td>66.67%</td>
+                    </tr> 
+                    
+                    <tr>
+                        <td>Hours per week under 100</td>
+                        <td>136</td>
+                        <td>29.46%</td>
+                        <td>70.54%</td>
                     </tr> 
                     
             <div class="pb-3"></div>
@@ -766,30 +789,46 @@
     
             <tr>
                 <th scope="row">1</td>
-                <td >35-44 years old</td>
-                <td >Local-gov</td>
-                <td >12</td>
+                <td >55-54 years old</td>
+                <td >Self-emp-not-inc</td>
+                <td >9</td>
                 <td >Married-civ-spouse</td>
-                <td >Craft-repair</td>
-                <td>Wife</td>
-                <td >White</td>
-                <td >Female</td>
+                <td >Farming-fishing</td>
+                <td>Husband</td>
+                <td >Amer-Indian-Eskimo</td>
+                <td >Male</td>
                 <td >Capital gain 0</td>
                 <td >Capital loss 0</td>
                 <td >Hours per week under 74.25</td>
-                <td >True</td>
+                <td >False</td>
             </tr>
             
             <tr>
                 <th scope="row">2</td>
                 <td >45-54 years old</td>
-                <td >Self-emp-inc</td>
+                <td >Private</td>
                 <td >9</td>
-                <td >Divorced</td>
-                <td >Exec-managerial</td>
-                <td>Not-in-family</td>
+                <td >Married-civ-spouse</td>
+                <td >Craft-repair</td>
+                <td>Husband</td>
                 <td >White</td>
                 <td >Male</td>
+                <td >Capital gain under 12499.875</td>
+                <td >Capital loss 0</td>
+                <td >Hours per week under 49.5</td>
+                <td >True</td>
+            </tr>
+            
+            <tr>
+                <th scope="row">3</td>
+                <td >25-34 years old</td>
+                <td >Local-gov</td>
+                <td >9</td>
+                <td >Divorced</td>
+                <td >Adm-clerical</td>
+                <td>Not-in-family</td>
+                <td >White</td>
+                <td >Female</td>
                 <td >Capital gain 0</td>
                 <td >Capital loss 0</td>
                 <td >Hours per week under 49.5</td>
@@ -797,79 +836,63 @@
             </tr>
             
             <tr>
-                <th scope="row">3</td>
-                <td >65 and over</td>
-                <td >Without-pay</td>
-                <td >9</td>
-                <td >Married-civ-spouse</td>
-                <td >Adm-clerical</td>
-                <td>Husband</td>
-                <td >Asian-Pac-Islander</td>
-                <td >Male</td>
-                <td >Capital gain 0</td>
-                <td >Capital loss 0</td>
-                <td >Hours per week under 12.375</td>
-                <td >False</td>
-            </tr>
-            
-            <tr>
                 <th scope="row">4</td>
-                <td >35-44 years old</td>
-                <td >Self-emp-not-inc</td>
-                <td >4</td>
+                <td >18-24 years old</td>
+                <td >Private</td>
+                <td >10</td>
                 <td >Never-married</td>
-                <td >Farming-fishing</td>
-                <td>Own-child</td>
+                <td >Tech-support</td>
+                <td>Not-in-family</td>
                 <td >White</td>
-                <td >Male</td>
+                <td >Female</td>
                 <td >Capital gain 0</td>
                 <td >Capital loss 0</td>
-                <td >Hours per week under 86.625</td>
+                <td >Hours per week under 37.125</td>
                 <td >False</td>
             </tr>
             
             <tr>
                 <th scope="row">5</td>
                 <td >35-44 years old</td>
-                <td >Local-gov</td>
+                <td >Private</td>
                 <td >13</td>
                 <td >Divorced</td>
-                <td >Protective-serv</td>
-                <td>Unmarried</td>
+                <td >Sales</td>
+                <td>Not-in-family</td>
                 <td >White</td>
-                <td >Female</td>
+                <td >Male</td>
                 <td >Capital gain 0</td>
                 <td >Capital loss 0</td>
                 <td >Hours per week under 49.5</td>
-                <td >False</td>
+                <td >True</td>
             </tr>
             
             <tr>
                 <th scope="row">6</td>
-                <td >45-54 years old</td>
+                <td >55-54 years old</td>
                 <td >Private</td>
-                <td >9</td>
-                <td >Never-married</td>
+                <td >10</td>
+                <td >Married-civ-spouse</td>
                 <td >Craft-repair</td>
-                <td>Not-in-family</td>
+                <td>Husband</td>
                 <td >White</td>
                 <td >Male</td>
                 <td >Capital gain 0</td>
                 <td >Capital loss 0</td>
                 <td >Hours per week under 49.5</td>
-                <td >False</td>
+                <td >True</td>
             </tr>
             
             <tr>
                 <th scope="row">7</td>
-                <td >55-54 years old</td>
-                <td >Private</td>
-                <td >6</td>
-                <td >Divorced</td>
-                <td >Farming-fishing</td>
-                <td>Not-in-family</td>
+                <td >18-24 years old</td>
+                <td >State-gov</td>
+                <td >10</td>
+                <td >Never-married</td>
+                <td >Adm-clerical</td>
+                <td>Own-child</td>
                 <td >White</td>
-                <td >Male</td>
+                <td >Female</td>
                 <td >Capital gain 0</td>
                 <td >Capital loss 0</td>
                 <td >Hours per week under 49.5</td>
@@ -878,11 +901,59 @@
             
             <tr>
                 <th scope="row">8</td>
-                <td >45-54 years old</td>
-                <td >State-gov</td>
+                <td >18-24 years old</td>
+                <td >Private</td>
+                <td >13</td>
+                <td >Never-married</td>
+                <td >Adm-clerical</td>
+                <td>Other-relative</td>
+                <td >Asian-Pac-Islander</td>
+                <td >Female</td>
+                <td >Capital gain 0</td>
+                <td >Capital loss 0</td>
+                <td >Hours per week under 49.5</td>
+                <td >False</td>
+            </tr>
+            
+            <tr>
+                <th scope="row">9</td>
+                <td >18-24 years old</td>
+                <td >Private</td>
+                <td >9</td>
+                <td >Never-married</td>
+                <td >Other-service</td>
+                <td>Own-child</td>
+                <td >White</td>
+                <td >Male</td>
+                <td >Capital gain 0</td>
+                <td >Capital loss 0</td>
+                <td >Hours per week under 74.25</td>
+                <td >False</td>
+            </tr>
+            
+            <tr>
+                <th scope="row">10</td>
+                <td >35-44 years old</td>
+                <td >Private</td>
+                <td >9</td>
+                <td >Married-civ-spouse</td>
+                <td >Machine-op-inspct</td>
+                <td>Husband</td>
+                <td >White</td>
+                <td >Male</td>
+                <td >Capital gain under 12499.875</td>
+                <td >Capital loss 0</td>
+                <td >Hours per week under 49.5</td>
+                <td >False</td>
+            </tr>
+            
+            <tr>
+                <th scope="row">11</td>
+                <td >55-54 years old</td>
+                <td >Private</td>
                 <td >13</td>
                 <td >Married-civ-spouse</td>
-                <td >Exec-managerial</td>
+                <td >Sales</td>
                 <td>Husband</td>
                 <td >White</td>
                 <td >Male</td>
@@ -893,47 +964,15 @@
             </tr>
             
             <tr>
-                <th scope="row">9</td>
-                <td >35-44 years old</td>
-                <td >Federal-gov</td>
-                <td >9</td>
-                <td >Divorced</td>
-                <td >Prof-specialty</td>
-                <td>Unmarried</td>
+                <th scope="row">12</td>
+                <td >55-54 years old</td>
+                <td >State-gov</td>
+                <td >10</td>
+                <td >Married-civ-spouse</td>
+                <td >Adm-clerical</td>
+                <td>Wife</td>
                 <td >White</td>
                 <td >Female</td>
-                <td >Capital gain 0</td>
-                <td >Capital loss 0</td>
-                <td >Hours per week under 49.5</td>
-                <td >False</td>
-            </tr>
-            
-            <tr>
-                <th scope="row">10</td>
-                <td >45-54 years old</td>
-                <td >Local-gov</td>
-                <td >14</td>
-                <td >Divorced</td>
-                <td >Prof-specialty</td>
-                <td>Own-child</td>
-                <td >White</td>
-                <td >Female</td>
-                <td >Capital gain 0</td>
-                <td >Capital loss 0</td>
-                <td >Hours per week under 74.25</td>
-                <td >False</td>
-            </tr>
-            
-            <tr>
-                <th scope="row">11</td>
-                <td >35-44 years old</td>
-                <td >Self-emp-inc</td>
-                <td >13</td>
-                <td >Divorced</td>
-                <td >Farming-fishing</td>
-                <td>Not-in-family</td>
-                <td >White</td>
-                <td >Male</td>
                 <td >Capital gain 0</td>
                 <td >Capital loss 0</td>
                 <td >Hours per week under 37.125</td>
@@ -941,32 +980,16 @@
             </tr>
             
             <tr>
-                <th scope="row">12</td>
-                <td >45-54 years old</td>
-                <td >Private</td>
-                <td >8</td>
-                <td >Married-spouse-absent</td>
-                <td >Handlers-cleaners</td>
-                <td>Not-in-family</td>
-                <td >Other</td>
-                <td >Male</td>
-                <td >Capital gain 0</td>
-                <td >Capital loss 0</td>
-                <td >Hours per week under 74.25</td>
-                <td >False</td>
-            </tr>
-            
-            <tr>
                 <th scope="row">13</td>
                 <td >25-34 years old</td>
-                <td >Private</td>
-                <td >9</td>
-                <td >Separated</td>
-                <td >Machine-op-inspct</td>
-                <td>Own-child</td>
+                <td >Self-emp-not-inc</td>
+                <td >15</td>
+                <td >Never-married</td>
+                <td >Prof-specialty</td>
+                <td>Not-in-family</td>
                 <td >White</td>
-                <td >Female</td>
-                <td >Capital gain 0</td>
+                <td >Male</td>
+                <td >Capital gain under 12499.875</td>
                 <td >Capital loss 0</td>
                 <td >Hours per week under 49.5</td>
                 <td >False</td>
@@ -976,10 +999,26 @@
                 <th scope="row">14</td>
                 <td >35-44 years old</td>
                 <td >Private</td>
+                <td >13</td>
+                <td >Married-civ-spouse</td>
+                <td >Adm-clerical</td>
+                <td>Wife</td>
+                <td >White</td>
+                <td >Female</td>
+                <td >Capital gain 0</td>
+                <td >Capital loss 0</td>
+                <td >Hours per week under 49.5</td>
+                <td >True</td>
+            </tr>
+            
+            <tr>
+                <th scope="row">15</td>
+                <td >25-34 years old</td>
+                <td >Private</td>
                 <td >10</td>
                 <td >Never-married</td>
                 <td >Exec-managerial</td>
-                <td>Not-in-family</td>
+                <td>Own-child</td>
                 <td >Black</td>
                 <td >Male</td>
                 <td >Capital gain 0</td>
@@ -989,13 +1028,29 @@
             </tr>
             
             <tr>
-                <th scope="row">15</td>
-                <td >55-54 years old</td>
-                <td >Self-emp-not-inc</td>
-                <td >9</td>
-                <td >Married-civ-spouse</td>
+                <th scope="row">16</td>
+                <td >18-24 years old</td>
+                <td >Private</td>
+                <td >10</td>
+                <td >Never-married</td>
                 <td >Farming-fishing</td>
-                <td>Husband</td>
+                <td>Own-child</td>
+                <td >White</td>
+                <td >Male</td>
+                <td >Capital gain 0</td>
+                <td >Capital loss 0</td>
+                <td >Hours per week under 12.375</td>
+                <td >False</td>
+            </tr>
+            
+            <tr>
+                <th scope="row">17</td>
+                <td >35-44 years old</td>
+                <td >Private</td>
+                <td >6</td>
+                <td >Divorced</td>
+                <td >Craft-repair</td>
+                <td>Not-in-family</td>
                 <td >White</td>
                 <td >Male</td>
                 <td >Capital gain 0</td>
@@ -1005,63 +1060,31 @@
             </tr>
             
             <tr>
-                <th scope="row">16</td>
-                <td >25-34 years old</td>
-                <td >Private</td>
-                <td >9</td>
-                <td >Married-civ-spouse</td>
-                <td >Farming-fishing</td>
-                <td>Husband</td>
-                <td >White</td>
-                <td >Male</td>
-                <td >Capital gain 0</td>
-                <td >Capital loss 0</td>
-                <td >Hours per week under 100</td>
-                <td >False</td>
-            </tr>
-            
-            <tr>
-                <th scope="row">17</td>
-                <td >45-54 years old</td>
-                <td >Private</td>
-                <td >4</td>
-                <td >Never-married</td>
-                <td >Other-service</td>
-                <td>Own-child</td>
-                <td >White</td>
-                <td >Female</td>
-                <td >Capital gain 0</td>
-                <td >Capital loss 0</td>
-                <td >Hours per week under 12.375</td>
-                <td >False</td>
-            </tr>
-            
-            <tr>
                 <th scope="row">18</td>
                 <td >35-44 years old</td>
-                <td >Private</td>
+                <td >Local-gov</td>
                 <td >10</td>
                 <td >Divorced</td>
-                <td >Sales</td>
-                <td>Not-in-family</td>
+                <td >Transport-moving</td>
+                <td>Unmarried</td>
                 <td >White</td>
-                <td >Female</td>
-                <td >Capital gain 0</td>
+                <td >Male</td>
+                <td >Capital gain under 12499.875</td>
                 <td >Capital loss 0</td>
-                <td >Hours per week under 37.125</td>
+                <td >Hours per week under 49.5</td>
                 <td >False</td>
             </tr>
             
             <tr>
                 <th scope="row">19</td>
-                <td >25-34 years old</td>
+                <td >45-54 years old</td>
                 <td >Local-gov</td>
                 <td >13</td>
-                <td >Divorced</td>
-                <td >Adm-clerical</td>
-                <td>Unmarried</td>
-                <td >Asian-Pac-Islander</td>
-                <td >Female</td>
+                <td >Married-civ-spouse</td>
+                <td >Prof-specialty</td>
+                <td>Husband</td>
+                <td >White</td>
+                <td >Male</td>
                 <td >Capital gain 0</td>
                 <td >Capital loss 0</td>
                 <td >Hours per week under 49.5</td>
@@ -1072,15 +1095,15 @@
                 <th scope="row">20</td>
                 <td >35-44 years old</td>
                 <td >Private</td>
-                <td >10</td>
-                <td >Married-civ-spouse</td>
-                <td >Transport-moving</td>
-                <td>Husband</td>
+                <td >13</td>
+                <td >Divorced</td>
+                <td >Sales</td>
+                <td>Own-child</td>
                 <td >White</td>
                 <td >Male</td>
                 <td >Capital gain 0</td>
                 <td >Capital loss 0</td>
-                <td >Hours per week under 74.25</td>
+                <td >Hours per week under 86.625</td>
                 <td >False</td>
             </tr>
             
@@ -1088,13 +1111,13 @@
                 <th scope="row">21</td>
                 <td >45-54 years old</td>
                 <td >Private</td>
-                <td >9</td>
-                <td >Divorced</td>
+                <td >13</td>
+                <td >Married-civ-spouse</td>
                 <td >Prof-specialty</td>
-                <td>Not-in-family</td>
+                <td>Husband</td>
                 <td >White</td>
                 <td >Male</td>
-                <td >Capital gain under 12499.875</td>
+                <td >Capital gain under 24999.75</td>
                 <td >Capital loss 0</td>
                 <td >Hours per week under 49.5</td>
                 <td >True</td>
@@ -1102,14 +1125,14 @@
             
             <tr>
                 <th scope="row">22</td>
-                <td >25-34 years old</td>
+                <td >45-54 years old</td>
                 <td >Private</td>
-                <td >13</td>
-                <td >Never-married</td>
-                <td >Exec-managerial</td>
-                <td>Own-child</td>
+                <td >4</td>
+                <td >Married-civ-spouse</td>
+                <td >Handlers-cleaners</td>
+                <td>Husband</td>
                 <td >White</td>
-                <td >Female</td>
+                <td >Male</td>
                 <td >Capital gain 0</td>
                 <td >Capital loss 0</td>
                 <td >Hours per week under 49.5</td>
@@ -1119,13 +1142,13 @@
             <tr>
                 <th scope="row">23</td>
                 <td >35-44 years old</td>
-                <td >Local-gov</td>
-                <td >11</td>
-                <td >Never-married</td>
-                <td >Exec-managerial</td>
-                <td>Unmarried</td>
-                <td >Amer-Indian-Eskimo</td>
-                <td >Female</td>
+                <td >Private</td>
+                <td >9</td>
+                <td >Married-civ-spouse</td>
+                <td >Adm-clerical</td>
+                <td>Husband</td>
+                <td >Asian-Pac-Islander</td>
+                <td >Male</td>
                 <td >Capital gain 0</td>
                 <td >Capital loss 0</td>
                 <td >Hours per week under 49.5</td>
@@ -1136,15 +1159,15 @@
                 <th scope="row">24</td>
                 <td >25-34 years old</td>
                 <td >Private</td>
-                <td >9</td>
+                <td >16</td>
                 <td >Married-civ-spouse</td>
-                <td >Machine-op-inspct</td>
+                <td >Prof-specialty</td>
                 <td>Husband</td>
-                <td >White</td>
+                <td >Asian-Pac-Islander</td>
                 <td >Male</td>
                 <td >Capital gain 0</td>
                 <td >Capital loss 0</td>
-                <td >Hours per week under 49.5</td>
+                <td >Hours per week under 74.25</td>
                 <td >False</td>
             </tr>
             
@@ -1152,15 +1175,15 @@
                 <th scope="row">25</td>
                 <td >25-34 years old</td>
                 <td >Private</td>
-                <td >9</td>
+                <td >10</td>
                 <td >Married-civ-spouse</td>
-                <td >Craft-repair</td>
+                <td >Exec-managerial</td>
                 <td>Husband</td>
                 <td >White</td>
                 <td >Male</td>
-                <td >Capital gain 0</td>
+                <td >Capital gain under 24999.75</td>
                 <td >Capital loss 0</td>
-                <td >Hours per week under 49.5</td>
+                <td >Hours per week under 74.25</td>
                 <td >True</td>
             </tr>
             </table></section>

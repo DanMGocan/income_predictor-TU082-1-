@@ -1,13 +1,26 @@
+# Time imports, to measure execution time #
+from raw_data import t0 # Time before execution
+from split_data import t1 # Time before splitting the data
+from model_train import t2 # Time before training the model
+from model_test import t3 # Time before testing the model
+# t4 and t5 will be declared and assigned in this module #
 
-from split_data import meta_data, test_data, train_data
+from split_data import meta_data, train_data, t1 
 from model_test import result
 from model_train import unique_values
-from time_imports import times
 import random
+import time
+
+correct_results = result[1]
+wrong_results = result[2]
+success_rate = f"{round(result[3]*100, 3)}%"
+
+t4 = time.perf_counter()
+
 
 def meta_data_to_html_table(data):
     return f'''
-    <section class="col-6 my-4 py-4">
+    <section class="col-6">
     <h4 class="p-0 m-0">Table with the available meta data</h4>
     <table class="table table-sm table-striped ">
         <tr>
@@ -40,7 +53,7 @@ def meta_data_to_html_table(data):
 def meta_categories_to_html(data):
     string = f'''
     <section class="col-6">
-    <h4>Tables with the amount of individual values, for each category</h4>
+    <h4 class="p-0 m-0">Tables with the amount of individual values, for each category</h4>
     '''
     str_to_add = ""
     for key, value in data["amount_of_values"].items():
@@ -67,10 +80,33 @@ def meta_categories_to_html(data):
 
 def test_results_to_html_table(data):
     string = f'''
+    
     '''
 
-def time_performance(data):
-    string = f'''
+def time_performance():
+    return f'''
+    <section class="col-6">
+    <h4 class="p-0 m-0">Table with the execution times</h4>
+    <table class="table table-sm table-striped">
+        <tr>
+            <th scope="col">To initialize, clean and convert data:</th>
+            <td>{round(t1 - t0, 3)} seconds</td>
+        <tr>
+        <tr>
+            <th scope="col">To split the data:</th>
+            <td>{round(t2 - t1, 3)} seconds</td>
+        <tr>
+        <tr>
+            <th scope="col">To train the model (performing analysis on {meta_data["train_data_length"]}) data entries:</th>
+            <td>{round(t3 - t2, 3)} seconds</td>
+        <tr>
+        <tr>
+            <th scope="col">To test the model (performing analysis on {meta_data["test_data_length"]}) data entries:</th>
+            <td>{round(t4 - t3, 3)} seconds</td>
+        <tr>
+        <PLACEHOLDER_FOR_TOTAL_EXEC_TIME>
+    </table>
+    </section>
     '''
 
 def dict_to_html_table(data, sample_size, data_type):
@@ -119,12 +155,16 @@ def dict_to_html_table(data, sample_size, data_type):
         entry_counter += 1
     return string + "</table></section>"
 
+correct_results = result[1]
+wrong_results = result[2]
+success_rate = f"{round(result[3]*100, 3)}%"
+
 training_data_table = dict_to_html_table(train_data, 25, "training data")
 meta_data_table = meta_data_to_html_table(meta_data)
 meta_categories = meta_categories_to_html(meta_data)
+time_performance_table = time_performance()
 
-def html(correct, wrong):
-    percentage = correct / (correct + wrong)
+def html():
     return f'''
     <!doctype html>
         <html lang="en">
@@ -140,6 +180,8 @@ def html(correct, wrong):
             </head>
             <body class="mx-auto col-10">
                 {meta_data_table}
+                <br>
+                {time_performance_table}
                 <br>
                 {meta_categories}
                 <br>
@@ -159,4 +201,3 @@ def html(correct, wrong):
         </html>
     '''
 
-html_result = html(result[1], result[2])
