@@ -1,18 +1,19 @@
-import webbrowser
-import time
-from raw_data import all_data
 from data_to_html import html
-from model_test import result
 
-html_result = html()
+html_result = html()[0]
+t5 = html()[1]
 
-def execute():
-
-    html_result.replace("<PLACEHOLDER_FOR_TOTAL_EXEC_TIME>", '''
-    
-    
+def execute(html_string):
+    new_string = html_string.replace("<PLACEHOLDER_FOR_TOTAL_EXEC_TIME>", f'''
+    <tr>
+        <th scope="col">Total execution time:</th>
+        <td>{round(t5, 3)} seconds</td>
+    </tr>
     ''')
+    
     with open('index.html','w') as data:
-        data.write(html_result)
+        data.write(new_string)
 
-execute()
+    
+
+execute(html_result)

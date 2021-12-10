@@ -55,8 +55,8 @@ def find_unique_values(data):
                 truth_average = 50
 
             unique_values[element][key]["Averages"] = {
-                "TRUE probability": round(truth_average, 2),
-                "FALSE probability": round(false_average, 2)
+                "true_probability": round(truth_average, 2),
+                "false_probability": round(false_average, 2)
             }
 
     return unique_values

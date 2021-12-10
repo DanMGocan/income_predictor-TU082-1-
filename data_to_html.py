@@ -3,7 +3,6 @@ from raw_data import t0 # Time before execution
 from split_data import t1 # Time before splitting the data
 from model_train import t2 # Time before training the model
 from model_test import t3 # Time before testing the model
-# t4 and t5 will be declared and assigned in this module #
 
 from split_data import meta_data, train_data, t1 
 from model_test import result
@@ -16,7 +15,6 @@ wrong_results = result[2]
 success_rate = f"{round(result[3]*100, 3)}%"
 
 t4 = time.perf_counter()
-
 
 def meta_data_to_html_table(data):
     return f'''
@@ -66,22 +64,56 @@ def meta_categories_to_html(data):
                     <th scope="row">Failure rate</th>
                     '''
             for parent_key, child_value in value.items():
+                    
+                    try:
+                        true_prob = unique_values[key][parent_key]["Averages"]["true_probability"]
+                        false_prob = unique_values[key][parent_key]["Averages"]["false_probability"]
+                    except KeyError:
+                        continue
+
                     str_to_add += f'''
                     <tr>
                         <td>{parent_key}</td>
                         <td>{child_value}</td>
-                        <td>{unique_values[key][parent_key]["Averages"]["TRUE probability"]}%</td>
-                        <td>{unique_values[key][parent_key]["Averages"]["FALSE probability"]}%</td>
+                        <td>{true_prob}%</td>
+                        <td>{false_prob}%</td>
                     </tr> 
                     '''
  
     string += str_to_add
     return string + "</table></section>"
 
-def test_results_to_html_table(data):
+def test_results_to_html_table(data, sample_size):
+    random_value = random.randint(0, len(data))
+    entry_counter = 1
     string = f'''
-    
+    <section class="col-6">
+        <h4 class="p-0 m-0">Table with results of the test</h4>
+        <small><strong></strong></a></small>
+            
+            <table class="table table-sm table-striped">
+                <tr>
+                    <th scope="col">Entry #</th>
+                    <th scope="col">Earnings over 50k</th>
+                    <th scope="col">Test outcome</th>
+                    <th scope="col">High earnings probability</th>
+                    <th scope="col">Low earning probability</th>
+                </tr>
     '''
+    for element in data[random_value : random_value + sample_size]:
+        string += f'''
+            <tr>
+                <th scope="row">{entry_counter}</td>
+                <td>{element["outcome"]}</td>
+                <td>{element["test_outcome"]}</td>
+                <td>{element["true_probability"]}</td>
+                <td>{element["false_probability"]}</td>
+                
+            </tr>
+            '''
+        entry_counter += 1
+
+    return string + "</table></section>"
 
 def time_performance():
     return f'''
@@ -91,30 +123,30 @@ def time_performance():
         <tr>
             <th scope="col">To initialize, clean and convert data:</th>
             <td>{round(t1 - t0, 3)} seconds</td>
-        <tr>
+        </tr>
         <tr>
             <th scope="col">To split the data:</th>
             <td>{round(t2 - t1, 3)} seconds</td>
-        <tr>
+        </tr>
         <tr>
             <th scope="col">To train the model (performing analysis on {meta_data["train_data_length"]}) data entries:</th>
             <td>{round(t3 - t2, 3)} seconds</td>
-        <tr>
+        </tr>
         <tr>
             <th scope="col">To test the model (performing analysis on {meta_data["test_data_length"]}) data entries:</th>
             <td>{round(t4 - t3, 3)} seconds</td>
-        <tr>
+        </tr>
         <PLACEHOLDER_FOR_TOTAL_EXEC_TIME>
     </table>
     </section>
     '''
 
-def dict_to_html_table(data, sample_size, data_type):
+def dict_to_html_table(data, sample_size):
     random_value = random.randint(0, len(data))
     entry_counter = 1
     string = f'''
     <section>
-        <h4 class="p-0 m-0">Table with {sample_size} data entries, from {data_type} pool</h4>
+        <h4 class="p-0 m-0">Table with {sample_size} data entries, from training data pool</h4>
         <small><strong>Only a small set of data has been written to the HTML file. All data is available in the source code available on GitHub, at <a href="https://www.google.com" target="_blank">https://github.com/DanMGocan/income_predictor-TU082-1-</strong></a></small>
             
             <table class="table table-sm table-striped">
@@ -159,10 +191,11 @@ correct_results = result[1]
 wrong_results = result[2]
 success_rate = f"{round(result[3]*100, 3)}%"
 
-training_data_table = dict_to_html_table(train_data, 25, "training data")
+training_data_table = dict_to_html_table(train_data, 25)
 meta_data_table = meta_data_to_html_table(meta_data)
 meta_categories = meta_categories_to_html(meta_data)
 time_performance_table = time_performance()
+test_results_table = test_results_to_html_table(result[0], 25)
 
 def html():
     return f'''
@@ -186,6 +219,8 @@ def html():
                 {meta_categories}
                 <br>
                 {training_data_table}
+                <br>
+                {test_results_table}
 
                 <!-- Optional JavaScript; choose one of the two! -->
 
@@ -199,5 +234,6 @@ def html():
                 -->
             </body>
         </html>
-    '''
+    ''', time.perf_counter()
+
 
