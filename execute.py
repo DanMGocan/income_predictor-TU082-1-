@@ -12,7 +12,7 @@ def execute():
     
     
     ''')
-    with open('/index.html','w') as data:
+    with open('index.html','w') as data:
         data.write(html_result)
 
 execute()
