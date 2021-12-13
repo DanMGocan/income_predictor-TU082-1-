@@ -177,6 +177,33 @@ def dict_to_html_table(data, sample_size):
         entry_counter += 1
     return string + "</table></section>"
 
+def data_analysis_string():
+    return f'''
+    <section class="container col-10">
+        <h4>Data analysis</h4>
+        <small>Please note that this text has been hard-coded and is not dynamically generated</small>
+        <p><span class="text-success"><strong>CORRELATION</strong></span> between young age and income, with 0% of Under 18 having an income of over 50k and between 1% - 2% of 18-24 years old fulfilling this condition. No other strong pattern observed</p>
+        <p><span class="text-success"><strong>CORRELATION</strong></span> between workclass and income, with 0% of Without-pay having an income of over 50k and over 50% of Self-emp-inc having an income over 50k. Self-emp-not-inc, Local-gov and State-gov around same level of @27% chances of earning over 50k. No other strong pattern observed.</p>
+        <p><span class="text-success"><strong>CORRELATION</strong></span> between education number and income, with under 5% of education levels 1, 2 and 3 having an income of under 50k</p>
+        <p><span class="text-success"><strong>CORRELATION</strong></span> between education number and income, with over 50% of education level 14 and @75% of education levels 15 and 16 having an income of over 50k</p>
+        <p><span class="text-success"><strong>CORRELATION</strong></span> between marital status and income, with most successful categories being married (Maried-viv-spouse @45%, Maried-AF-spouse @38%) vs. Never-married (5%), or Separated (7%).</p>
+        <p><span class="text-success"><strong>CORRELATION</strong></span> between occupation and income, with almost half of all Exec-managerial and Prof-specialty having an incomve over 50k.</p>
+        <p><span class="text-success"><strong>CORRELATION</strong></span> between race and income, with White and Asian-Pac-Islander having twice more chances to earn over 50k compared to Black and Amer-Indian-Eskimo</p>
+        <p><span class="text-success"><strong>CORRELATION</strong></span> between gender and income, with Male having three more times the chance to earn over 50k</p>
+        <p><span class="text-success"><strong>VERY STRONG CORRELATION</strong></span> between capital gain and income with higher values having almost 100% chances to earn over 50k a year while data entries with 0 capital gains, having a chance of 20% to earn over 50k</p>
+        <p><span class="text-success"><strong>CORRELATION</strong></span> between hours worked per week and income, with everyone that is working under 37.5 hours a week having a less than 10% chance of earning more than 50k a year</p>
+    </section>
+    '''
+
+def model_performance_string():
+    return f'''
+    <section class="container col-10">
+        <h4>Thoughts on model performance</h4>
+        <p>I think the main issue with this model is the amount of unbalanced data, like capital_gain, capital_loss, 
+        race or workclass. We observe that for capital_gain and capital_loss, from a 30162 long data set, between 
+        27000 and 28000 values are at 0. For workclass, the Private category has over 22000 values and for race,
+        White has over 26000 values. 
+    '''
 ###########################################################################
 ###########################################################################
 
@@ -184,10 +211,11 @@ def dict_to_html_table(data, sample_size):
 # In order to initialize the amount of data entries presented, change the value for this function from 50
 # to your prefered value
 training_data_table = dict_to_html_table(train_data, 50)
-
 meta_data_table = meta_data_to_html_table(meta_data)
 meta_categories = meta_categories_to_html(meta_data)
 time_performance_table = time_performance_to_table()
+data_analysis = data_analysis_string()
+model_performance = model_performance_string()
 
 # The main function that deliver the final string, to execute.py
 def html():
@@ -217,6 +245,13 @@ def html():
                 <div class="py-4"></div>
                 {training_data_table}
                 <br>
+                <div class="py-4"></div>
+                {data_analysis}
+                <br>
+                <div class="py-4"></div>
+                {model_performance}
+                <br>
+                <div class="py-4"></div>
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
             </body>

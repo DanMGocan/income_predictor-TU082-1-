@@ -16,6 +16,7 @@ def test_model(probabilities, test_data):
         true_probability = 0
         false_probability = 0
 
+        # Add all the average success rates
         for key, value in element.items():
             try:
                 true_probability += probabilities[key][value]["Averages"]["true_probability"]
@@ -23,14 +24,19 @@ def test_model(probabilities, test_data):
             except KeyError:
                 continue
             
+        # Divide the total averages by the lenght of the data
         element["true_probability"] = round(true_probability  / length_of_data)
         element["false_probability"] = round(false_probability / length_of_data)
         
+        # Count if the true probability is higher than the true probability and assign a 
+        # test outcome to it, according to that
         if element["true_probability"] >= element["false_probability"]:
             element["test_outcome"] = True
         else:
             element["test_outcome"] = False
         
+        # Count if the assigned test result is equal with the actual value and if so
+        # append the correct and wrong variable as needed
         if element["outcome"] == element["test_outcome"]:
             correct += 1
         else:
