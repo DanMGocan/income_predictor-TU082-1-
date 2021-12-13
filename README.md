@@ -156,4 +156,4 @@ By successful or unsuccessful, we measure if the data entry has an income that i
 
 Using `time` module, I have taken measurements at vital points in the program, to measure its performance in seconds. We observe that the most consuming part in terms of resources is converting and clearing the data. This is due to successive `for` loops. 
 
-Persoal opinion about data interpretation can be found at the end of the index.html document. 
+Personal opinion about data interpretation can be found at the end of the index.html document. 
