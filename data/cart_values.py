@@ -1,1 +1,722 @@
-{'age': {'35-44 years old': {'True': 2099, 'False': 4144, 'Averages': {'true_probability': 33.62, 'false_probability': 66.38}}, '25-34 years old': {'True': 1114, 'False': 5288, 'Averages': {'true_probability': 17.4, 'false_probability': 82.6}}, '18-24 years old': {'True': 42, 'False': 3630, 'Averages': {'true_probability': 1.14, 'false_probability': 98.86}}, '45-54 years old': {'True': 1809, 'False': 2655, 'Averages': {'true_probability': 40.52, 'false_probability': 59.48}}, '55-54 years old': {'True': 757, 'False': 1550, 'Averages': {'true_probability': 32.81, 'false_probability': 67.19}}, 'Under 18': {'True': 0, 'False': 252, 'Averages': {'true_probability': 0.0, 'false_probability': 100.0}}, '65 and over': {'True': 180, 'False': 603, 'Averages': {'true_probability': 22.99, 'false_probability': 77.01}}}, 'workclass': {'Self-emp-inc': {'True': 481, 'False': 372, 'Averages': {'true_probability': 56.39, 'false_probability': 43.61}}, 'Private': {'True': 3891, 'False': 13951, 'Averages': {'true_probability': 21.81, 'false_probability': 78.19}}, 'Local-gov': {'True': 488, 'False': 1176, 'Averages': {'true_probability': 29.33, 'false_probability': 70.67}}, 'Federal-gov': {'True': 299, 'False': 478, 'Averages': {'true_probability': 38.48, 'false_probability': 61.52}}, 'Self-emp-not-inc': {'True': 574, 'False': 1399, 'Averages': {'true_probability': 29.09, 'false_probability': 70.91}}, 'State-gov': {'True': 268, 'False': 736, 'Averages': {'true_probability': 26.69, 'false_probability': 73.31}}, 'Without-pay': {'True': 0, 'False': 10, 'Averages': {'true_probability': 0.0, 'false_probability': 100.0}}}, 'education_number': {9: {'True': 1265, 'False': 6612, 'Averages': {'true_probability': 16.06, 'false_probability': 83.94}}, 12: {'True': 208, 'False': 605, 'Averages': {'true_probability': 25.58, 'false_probability': 74.42}}, 13: {'True': 1711, 'False': 2338, 'Averages': {'true_probability': 42.26, 'false_probability': 57.74}}, 10: {'True': 1079, 'False': 4248, 'Averages': {'true_probability': 20.26, 'false_probability': 79.74}}, 14: {'True': 734, 'False': 574, 'Averages': {'true_probability': 56.12, 'false_probability': 43.88}}, 6: {'True': 40, 'False': 607, 'Averages': {'true_probability': 6.18, 'false_probability': 93.82}}, 11: {'True': 282, 'False': 758, 'Averages': {'true_probability': 27.12, 'false_probability': 72.88}}, 7: {'True': 50, 'False': 783, 'Averages': {'true_probability': 6.0, 'false_probability': 94.0}}, 4: {'True': 25, 'False': 416, 'Averages': {'true_probability': 5.67, 'false_probability': 94.33}}, 3: {'True': 9, 'False': 214, 'Averages': {'true_probability': 4.04, 'false_probability': 95.96}}, 2: {'True': 5, 'False': 119, 'Averages': {'true_probability': 4.03, 'false_probability': 95.97}}, 16: {'True': 235, 'False': 70, 'Averages': {'true_probability': 77.05, 'false_probability': 22.95}}, 5: {'True': 20, 'False': 349, 'Averages': {'true_probability': 5.42, 'false_probability': 94.58}}, 8: {'True': 20, 'False': 273, 'Averages': {'true_probability': 6.83, 'false_probability': 93.17}}, 1: {'True': 0, 'False': 38, 'Averages': {'true_probability': 0.0, 'false_probability': 100.0}}, 15: {'True': 316, 'False': 111, 'Averages': {'true_probability': 74.0, 'false_probability': 26.0}}}, 'marital_status': {'Never-married': {'True': 378, 'False': 7460, 'Averages': {'true_probability': 4.82, 'false_probability': 95.18}}, 'Married-civ-spouse': {'True': 5079, 'False': 6073, 'Averages': {'true_probability': 45.54, 'false_probability': 54.46}}, 'Divorced': {'True': 387, 'False': 3003, 'Averages': {'true_probability': 11.42, 'false_probability': 88.58}}, 'Widowed': {'True': 63, 'False': 614, 'Averages': {'true_probability': 9.31, 'false_probability': 90.69}}, 'Separated': {'True': 62, 'False': 696, 'Averages': {'true_probability': 8.18, 'false_probability': 91.82}}, 'Married-spouse-absent': {'True': 26, 'False': 267, 'Averages': {'true_probability': 8.87, 'false_probability': 91.13}}, 'Married-AF-spouse': {'True': 6, 'False': 9, 'Averages': {'true_probability': 40.0, 'false_probability': 60.0}}}, 'occupation': {'Other-service': {'True': 99, 'False': 2459, 'Averages': {'true_probability': 3.87, 'false_probability': 96.13}}, 'Prof-specialty': {'True': 1443, 'False': 1809, 'Averages': {'true_probability': 44.37, 'false_probability': 55.63}}, 'Machine-op-inspct': {'True': 202, 'False': 1392, 'Averages': {'true_probability': 12.67, 'false_probability': 87.33}}, 'Craft-repair': {'True': 707, 'False': 2516, 'Averages': {'true_probability': 21.94, 'false_probability': 78.06}}, 'Sales': {'True': 787, 'False': 2070, 'Averages': {'true_probability': 27.55, 'false_probability': 72.45}}, 'Exec-managerial': {'True': 1592, 'False': 1598, 'Averages': {'true_probability': 49.91, 'false_probability': 50.09}}, 'Handlers-cleaners': {'True': 64, 'False': 1018, 'Averages': {'true_probability': 5.91, 'false_probability': 94.09}}, 'Protective-serv': {'True': 163, 'False': 334, 'Averages': {'true_probability': 32.8, 'false_probability': 67.2}}, 'Tech-support': {'True': 220, 'False': 520, 'Averages': {'true_probability': 29.73, 'false_probability': 70.27}}, 'Adm-clerical': {'True': 387, 'False': 2563, 'Averages': {'true_probability': 13.12, 'false_probability': 86.88}}, 'Farming-fishing': {'True': 93, 'False': 709, 'Averages': {'true_probability': 11.6, 'false_probability': 88.4}}, 'Transport-moving': {'True': 240, 'False': 1008, 'Averages': {'true_probability': 19.23, 'false_probability': 80.77}}, 'Priv-house-serv': {'True': 1, 'False': 115, 'Averages': {'true_probability': 0.86, 'false_probability': 99.14}}, 'Armed-Forces': {'True': 1, 'False': 6, 'Averages': {'true_probability': 14.29, 'false_probability': 85.71}}}, 'relationship': {'Not-in-family': {'True': 691, 'False': 5557, 'Averages': {'true_probability': 11.06, 'false_probability': 88.94}}, 'Husband': {'True': 4509, 'False': 5373, 'Averages': {'true_probability': 45.63, 'false_probability': 54.37}}, 'Other-relative': {'True': 31, 'False': 675, 'Averages': {'true_probability': 4.39, 'false_probability': 95.61}}, 'Own-child': {'True': 47, 'False': 3559, 'Averages': {'true_probability': 1.3, 'false_probability': 98.7}}, 'Unmarried': {'True': 177, 'False': 2394, 'Averages': {'true_probability': 6.88, 'false_probability': 93.12}}, 'Wife': {'True': 546, 'False': 565, 'Averages': {'true_probability': 49.14, 'false_probability': 50.86}}}, 'race': {'White': {'True': 5474, 'False': 15302, 'Averages': {'true_probability': 26.35, 'false_probability': 73.65}}, 'Black': {'True': 291, 'False': 1923, 'Averages': {'true_probability': 13.14, 'false_probability': 86.86}}, 'Asian-Pac-Islander': {'True': 192, 'False': 529, 'Averages': {'true_probability': 26.63, 'false_probability': 73.37}}, 'Amer-Indian-Eskimo': {'True': 26, 'False': 200, 'Averages': {'true_probability': 11.5, 'false_probability': 88.5}}, 'Other': {'True': 19, 'False': 169, 'Averages': {'true_probability': 10.11, 'false_probability': 89.89}}}, 'gender': {'Female': {'True': 903, 'False': 6944, 'Averages': {'true_probability': 11.51, 'false_probability': 88.49}}, 'Male': {'True': 5099, 'False': 11182, 'Averages': {'true_probability': 31.32, 'false_probability': 68.68}}}, 'capital_gain': {'Capital gain 0': {'True': 4740, 'False': 17367, 'Averages': {'true_probability': 21.44, 'false_probability': 78.56}}, 'Capital gain under 12499.875': {'True': 729, 'False': 757, 'Averages': {'true_probability': 49.06, 'false_probability': 50.94}}, 'Capital gain under 24999.75': {'True': 374, 'False': 1, 'Averages': {'true_probability': 99.73, 'false_probability': 0.27}}, 'Capital gain under 37499.625': {'True': 39, 'False': 2, 'Averages': {'true_probability': 95.12, 'false_probability': 4.88}}, 'Capital gain under 100000': {'True': 116, 'False': 0, 'Averages': {'true_probability': 100.0, 'false_probability': 0.0}}}, 'capital_loss': {'Capital loss 0': {'True': 5413, 'False': 17572, 'Averages': {'true_probability': 23.55, 'false_probability': 76.45}}, 'Capital loss under 2178.0': {'True': 448, 'False': 293, 'Averages': {'true_probability': 60.46, 'false_probability': 39.54}}, 'Capital loss under 1089.0': {'True': 1, 'False': 16, 'Averages': {'true_probability': 5.88, 'false_probability': 94.12}}, 'Capital loss under 3267.0': {'True': 98, 'False': 61, 'Averages': {'true_probability': 61.64, 'false_probability': 38.36}}, 'Capital loss under 1633.5': {'True': 40, 'False': 173, 'Averages': {'true_probability': 18.78, 'false_probability': 81.22}}, 'Capital loss under 4357': {'True': 0, 'False': 2, 'Averages': {'true_probability': 0.0, 'false_probability': 100.0}}, 'Capital loss under 3811.5': {'True': 1, 'False': 0, 'Averages': {'true_probability': 100.0, 'false_probability': 0.0}}, 'Capital loss under 544.5': {'True': 0, 'False': 4, 'Averages': {'true_probability': 0.0, 'false_probability': 100.0}}}, 'hours_per_week': {'Hours per week under 74.25': {'True': 2056, 'False': 2627, 'Averages': {'true_probability': 43.9, 'false_probability': 56.1}}, 'Hours per week under 49.5': {'True': 3383, 'False': 10785, 'Averages': {'true_probability': 23.88, 'false_probability': 76.12}}, 'Hours per week under 24.75': {'True': 105, 'False': 1506, 'Averages': {'true_probability': 6.52, 'false_probability': 93.48}}, 'Hours per week under 37.125': {'True': 312, 'False': 2524, 'Averages': {'true_probability': 11.0, 'false_probability': 89.0}}, 'Hours per week under 100': {'True': 31, 'False': 72, 'Averages': {'true_probability': 30.1, 'false_probability': 69.9}}, 'Hours per week under 12.375': {'True': 39, 'False': 483, 'Averages': {'true_probability': 7.47, 'false_probability': 92.53}}, 'Hours per week under 86.625': {'True': 76, 'False': 124, 'Averages': {'true_probability': 38.0, 'false_probability': 62.0}}}, 'outcome': {False: {'True': 0, 'False': 18127, 'Averages': {'true_probability': 0.0, 'false_probability': 100.0}}, True: {'True': 6001, 'False': 0, 'Averages': {'true_probability': 100.0, 'false_probability': 0.0}}}}
+{
+    'age': {
+        '25-34 years old': {
+            'True': 1106,
+            'False': 5335,
+            'Averages': {
+                'true_probability': 17.17,
+                'false_probability': 82.83
+            }
+        },
+        '35-44 years old': {
+            'True': 2072,
+            'False': 4116,
+            'Averages': {
+                'true_probability': 33.48,
+                'false_probability': 66.52
+            }
+        },
+        '65 and over': {
+            'True': 182,
+            'False': 591,
+            'Averages': {
+                'true_probability': 23.54,
+                'false_probability': 76.46
+            }
+        },
+        '55-54 years old': {
+            'True': 757,
+            'False': 1523,
+            'Averages': {
+                'true_probability': 33.2,
+                'false_probability': 66.8
+            }
+        },
+        '45-54 years old': {
+            'True': 1831,
+            'False': 2700,
+            'Averages': {
+                'true_probability': 40.41,
+                'false_probability': 59.59
+            }
+        },
+        '18-24 years old': {
+            'True': 47,
+            'False': 3588,
+            'Averages': {
+                'true_probability': 1.29,
+                'false_probability': 98.71
+            }
+        },
+        'Under 18': {
+            'True': 0,
+            'False': 275,
+            'Averages': {
+                'true_probability': 0.0,
+                'false_probability': 100.0
+            }
+        }
+    },
+    'workclass': {
+        'Private': {
+            'True': 3884,
+            'False': 13885,
+            'Averages': {
+                'true_probability': 21.86,
+                'false_probability': 78.14
+            }
+        },
+        'Self-emp-inc': {
+            'True': 488,
+            'False': 370,
+            'Averages': {
+                'true_probability': 56.88,
+                'false_probability': 43.12
+            }
+        },
+        'Local-gov': {
+            'True': 482,
+            'False': 1196,
+            'Averages': {
+                'true_probability': 28.72,
+                'false_probability': 71.28
+            }
+        },
+        'State-gov': {
+            'True': 261,
+            'False': 773,
+            'Averages': {
+                'true_probability': 25.24,
+                'false_probability': 74.76
+            }
+        },
+        'Federal-gov': {
+            'True': 301,
+            'False': 442,
+            'Averages': {
+                'true_probability': 40.51,
+                'false_probability': 59.49
+            }
+        },
+        'Self-emp-not-inc': {
+            'True': 578,
+            'False': 1453,
+            'Averages': {
+                'true_probability': 28.46,
+                'false_probability': 71.54
+            }
+        },
+        'Without-pay': {
+            'True': 0,
+            'False': 10,
+            'Averages': {
+                'true_probability': 0.0,
+                'false_probability': 100.0
+            }
+        }
+    },
+    'education_number': {
+        9: {
+            'True': 1276,
+            'False': 6569,
+            'Averages': {
+                'true_probability': 16.27,
+                'false_probability': 83.73
+            }
+        },
+        10: {
+            'True': 1053,
+            'False': 4261,
+            'Averages': {
+                'true_probability': 19.82,
+                'false_probability': 80.18
+            }
+        },
+        13: {
+            'True': 1713,
+            'False': 2361,
+            'Averages': {
+                'true_probability': 42.05,
+                'false_probability': 57.95
+            }
+        },
+        12: {
+            'True': 211,
+            'False': 612,
+            'Averages': {
+                'true_probability': 25.64,
+                'false_probability': 74.36
+            }
+        },
+        7: {
+            'True': 51,
+            'False': 798,
+            'Averages': {
+                'true_probability': 6.01,
+                'false_probability': 93.99
+            }
+        },
+        14: {
+            'True': 713,
+            'False': 573,
+            'Averages': {
+                'true_probability': 55.44,
+                'false_probability': 44.56
+            }
+        },
+        5: {
+            'True': 21,
+            'False': 344,
+            'Averages': {
+                'true_probability': 5.75,
+                'false_probability': 94.25
+            }
+        },
+        8: {
+            'True': 25,
+            'False': 278,
+            'Averages': {
+                'true_probability': 8.25,
+                'false_probability': 91.75
+            }
+        },
+        6: {
+            'True': 44,
+            'False': 603,
+            'Averages': {
+                'true_probability': 6.8,
+                'false_probability': 93.2
+            }
+        },
+        2: {
+            'True': 6,
+            'False': 113,
+            'Averages': {
+                'true_probability': 5.04,
+                'false_probability': 94.96
+            }
+        },
+        16: {
+            'True': 228,
+            'False': 65,
+            'Averages': {
+                'true_probability': 77.82,
+                'false_probability': 22.18
+            }
+        },
+        11: {
+            'True': 277,
+            'False': 768,
+            'Averages': {
+                'true_probability': 26.51,
+                'false_probability': 73.49
+            }
+        },
+        15: {
+            'True': 335,
+            'False': 111,
+            'Averages': {
+                'true_probability': 75.11,
+                'false_probability': 24.89
+            }
+        },
+        4: {
+            'True': 29,
+            'False': 409,
+            'Averages': {
+                'true_probability': 6.62,
+                'false_probability': 93.38
+            }
+        },
+        3: {
+            'True': 11,
+            'False': 219,
+            'Averages': {
+                'true_probability': 4.78,
+                'false_probability': 95.22
+            }
+        },
+        1: {
+            'True': 0,
+            'False': 37,
+            'Averages': {
+                'true_probability': 0.0,
+                'false_probability': 100.0
+            }
+        }
+    },
+    'marital_status': {
+        'Never-married': {
+            'True': 382,
+            'False': 7429,
+            'Averages': {
+                'true_probability': 4.89,
+                'false_probability': 95.11
+            }
+        },
+        'Married-civ-spouse': {
+            'True': 5099,
+            'False': 6112,
+            'Averages': {
+                'true_probability': 45.48,
+                'false_probability': 54.52
+            }
+        },
+        'Separated': {
+            'True': 57,
+            'False': 706,
+            'Averages': {
+                'true_probability': 7.47,
+                'false_probability': 92.53
+            }
+        },
+        'Divorced': {
+            'True': 361,
+            'False': 3012,
+            'Averages': {
+                'true_probability': 10.7,
+                'false_probability': 89.3
+            }
+        },
+        'Married-spouse-absent': {
+            'True': 25,
+            'False': 279,
+            'Averages': {
+                'true_probability': 8.22,
+                'false_probability': 91.78
+            }
+        },
+        'Widowed': {
+            'True': 63,
+            'False': 583,
+            'Averages': {
+                'true_probability': 9.75,
+                'false_probability': 90.25
+            }
+        },
+        'Married-AF-spouse': {
+            'True': 7,
+            'False': 8,
+            'Averages': {
+                'true_probability': 46.67,
+                'false_probability': 53.33
+            }
+        }
+    },
+    'occupation': {
+        'Other-service': {
+            'True': 107,
+            'False': 2429,
+            'Averages': {
+                'true_probability': 4.22,
+                'false_probability': 95.78
+            }
+        },
+        'Exec-managerial': {
+            'True': 1550,
+            'False': 1665,
+            'Averages': {
+                'true_probability': 48.21,
+                'false_probability': 51.79
+            }
+        },
+        'Adm-clerical': {
+            'True': 402,
+            'False': 2602,
+            'Averages': {
+                'true_probability': 13.38,
+                'false_probability': 86.62
+            }
+        },
+        'Sales': {
+            'True': 768,
+            'False': 2055,
+            'Averages': {
+                'true_probability': 27.21,
+                'false_probability': 72.79
+            }
+        },
+        'Prof-specialty': {
+            'True': 1451,
+            'False': 1772,
+            'Averages': {
+                'true_probability': 45.02,
+                'false_probability': 54.98
+            }
+        },
+        'Transport-moving': {
+            'True': 249,
+            'False': 1001,
+            'Averages': {
+                'true_probability': 19.92,
+                'false_probability': 80.08
+            }
+        },
+        'Craft-repair': {
+            'True': 728,
+            'False': 2519,
+            'Averages': {
+                'true_probability': 22.42,
+                'false_probability': 77.58
+            }
+        },
+        'Farming-fishing': {
+            'True': 99,
+            'False': 686,
+            'Averages': {
+                'true_probability': 12.61,
+                'false_probability': 87.39
+            }
+        },
+        'Tech-support': {
+            'True': 215,
+            'False': 517,
+            'Averages': {
+                'true_probability': 29.37,
+                'false_probability': 70.63
+            }
+        },
+        'Handlers-cleaners': {
+            'True': 67,
+            'False': 1022,
+            'Averages': {
+                'true_probability': 6.15,
+                'false_probability': 93.85
+            }
+        },
+        'Protective-serv': {
+            'True': 170,
+            'False': 355,
+            'Averages': {
+                'true_probability': 32.38,
+                'false_probability': 67.62
+            }
+        },
+        'Machine-op-inspct': {
+            'True': 188,
+            'False': 1382,
+            'Averages': {
+                'true_probability': 11.97,
+                'false_probability': 88.03
+            }
+        },
+        'Priv-house-serv': {
+            'True': 0,
+            'False': 111,
+            'Averages': {
+                'true_probability': 0.0,
+                'false_probability': 100.0
+            }
+        },
+        'Armed-Forces': {
+            'True': 0,
+            'False': 6,
+            'Averages': {
+                'true_probability': 0.0,
+                'false_probability': 100.0
+            }
+        }
+    },
+    'relationship': {
+        'Own-child': {
+            'True': 52,
+            'False': 3544,
+            'Averages': {
+                'true_probability': 1.45,
+                'false_probability': 98.55
+            }
+        },
+        'Husband': {
+            'True': 4538,
+            'False': 5409,
+            'Averages': {
+                'true_probability': 45.62,
+                'false_probability': 54.38
+            }
+        },
+        'Not-in-family': {
+            'True': 659,
+            'False': 5532,
+            'Averages': {
+                'true_probability': 10.64,
+                'false_probability': 89.36
+            }
+        },
+        'Wife': {
+            'True': 543,
+            'False': 558,
+            'Averages': {
+                'true_probability': 49.32,
+                'false_probability': 50.68
+            }
+        },
+        'Unmarried': {
+            'True': 176,
+            'False': 2396,
+            'Averages': {
+                'true_probability': 6.84,
+                'false_probability': 93.16
+            }
+        },
+        'Other-relative': {
+            'True': 27,
+            'False': 690,
+            'Averages': {
+                'true_probability': 3.77,
+                'false_probability': 96.23
+            }
+        }
+    },
+    'race': {
+        'Asian-Pac-Islander': {
+            'True': 207,
+            'False': 532,
+            'Averages': {
+                'true_probability': 28.01,
+                'false_probability': 71.99
+            }
+        },
+        'White': {
+            'True': 5465,
+            'False': 15278,
+            'Averages': {
+                'true_probability': 26.35,
+                'false_probability': 73.65
+            }
+        },
+        'Black': {
+            'True': 282,
+            'False': 1959,
+            'Averages': {
+                'true_probability': 12.58,
+                'false_probability': 87.42
+            }
+        },
+        'Amer-Indian-Eskimo': {
+            'True': 26,
+            'False': 203,
+            'Averages': {
+                'true_probability': 11.35,
+                'false_probability': 88.65
+            }
+        },
+        'Other': {
+            'True': 15,
+            'False': 158,
+            'Averages': {
+                'true_probability': 8.67,
+                'false_probability': 91.33
+            }
+        }
+    },
+    'gender': {
+        'Male': {
+            'True': 5110,
+            'False': 11228,
+            'Averages': {
+                'true_probability': 31.28,
+                'false_probability': 68.72
+            }
+        },
+        'Female': {
+            'True': 886,
+            'False': 6904,
+            'Averages': {
+                'true_probability': 11.37,
+                'false_probability': 88.63
+            }
+        }
+    },
+    'capital_gain': {
+        'Capital gain 0': {
+            'True': 4708,
+            'False': 17380,
+            'Averages': {
+                'true_probability': 21.31,
+                'false_probability': 78.69
+            }
+        },
+        'Capital gain under 12499.875': {
+            'True': 745,
+            'False': 748,
+            'Averages': {
+                'true_probability': 49.9,
+                'false_probability': 50.1
+            }
+        },
+        'Capital gain under 37499.625': {
+            'True': 33,
+            'False': 2,
+            'Averages': {
+                'true_probability': 94.29,
+                'false_probability': 5.71
+            }
+        },
+        'Capital gain under 100000': {
+            'True': 120,
+            'False': 0,
+            'Averages': {
+                'true_probability': 100.0,
+                'false_probability': 0.0
+            }
+        },
+        'Capital gain under 24999.75': {
+            'True': 386,
+            'False': 1,
+            'Averages': {
+                'true_probability': 99.74,
+                'false_probability': 0.26
+            }
+        },
+        'Capital gain under 49999.5': {
+            'True': 0,
+            'False': 1,
+            'Averages': {
+                'true_probability': 0.0,
+                'false_probability': 100.0
+            }
+        }
+    },
+    'capital_loss': {
+        'Capital loss 0': {
+            'True': 5404,
+            'False': 17564,
+            'Averages': {
+                'true_probability': 23.53,
+                'false_probability': 76.47
+            }
+        },
+        'Capital loss under 2178.0': {
+            'True': 445,
+            'False': 304,
+            'Averages': {
+                'true_probability': 59.41,
+                'false_probability': 40.59
+            }
+        },
+        'Capital loss under 1633.5': {
+            'True': 43,
+            'False': 169,
+            'Averages': {
+                'true_probability': 20.28,
+                'false_probability': 79.72
+            }
+        },
+        'Capital loss under 3267.0': {
+            'True': 101,
+            'False': 63,
+            'Averages': {
+                'true_probability': 61.59,
+                'false_probability': 38.41
+            }
+        },
+        'Capital loss under 1089.0': {
+            'True': 0,
+            'False': 18,
+            'Averages': {
+                'true_probability': 0.0,
+                'false_probability': 100.0
+            }
+        },
+        'Capital loss under 544.5': {
+            'True': 0,
+            'False': 7,
+            'Averages': {
+                'true_probability': 0.0,
+                'false_probability': 100.0
+            }
+        },
+        'Capital loss under 4357': {
+            'True': 0,
+            'False': 1,
+            'Averages': {
+                'true_probability': 0.0,
+                'false_probability': 100.0
+            }
+        },
+        'Capital loss under 3811.5': {
+            'True': 1,
+            'False': 2,
+            'Averages': {
+                'true_probability': 33.33,
+                'false_probability': 66.67
+            }
+        }
+    },
+    'hours_per_week': {
+        'Hours per week under 49.5': {
+            'True': 3395,
+            'False': 10851,
+            'Averages': {
+                'true_probability': 23.83,
+                'false_probability': 76.17
+            }
+        },
+        'Hours per week under 74.25': {
+            'True': 2037,
+            'False': 2552,
+            'Averages': {
+                'true_probability': 44.39,
+                'false_probability': 55.61
+            }
+        },
+        'Hours per week under 37.125': {
+            'True': 311,
+            'False': 2531,
+            'Averages': {
+                'true_probability': 10.94,
+                'false_probability': 89.06
+            }
+        },
+        'Hours per week under 24.75': {
+            'True': 108,
+            'False': 1513,
+            'Averages': {
+                'true_probability': 6.66,
+                'false_probability': 93.34
+            }
+        },
+        'Hours per week under 100': {
+            'True': 33,
+            'False': 69,
+            'Averages': {
+                'true_probability': 32.35,
+                'false_probability': 67.65
+            }
+        },
+        'Hours per week under 12.375': {
+            'True': 36,
+            'False': 488,
+            'Averages': {
+                'true_probability': 6.87,
+                'false_probability': 93.13
+            }
+        },
+        'Hours per week under 86.625': {
+            'True': 74,
+            'False': 125,
+            'Averages': {
+                'true_probability': 37.19,
+                'false_probability': 62.81
+            }
+        }
+    },
+    'outcome': {
+        False: {
+            'True': 0,
+            'False': 18133,
+            'Averages': {
+                'true_probability': 0.0,
+                'false_probability': 100.0
+            }
+        },
+        True: {
+            'True': 5995,
+            'False': 0,
+            'Averages': {
+                'true_probability': 100.0,
+                'false_probability': 0.0
+            }
+        }
+    }
+}
